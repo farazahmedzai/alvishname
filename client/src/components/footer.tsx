@@ -37,10 +37,10 @@ export default function Footer() {
           <div>
             <h4 className="font-cinzel text-lg font-medium text-elvish-light mb-4">Generators</h4>
             <ul className="space-y-2 text-elvish-gray">
-              <li><a href="#" className="hover:text-elvish-accent transition-colors">Sindarin Names</a></li>
-              <li><a href="#" className="hover:text-elvish-accent transition-colors">Quenya Names</a></li>
-              <li><a href="#" className="hover:text-elvish-accent transition-colors">D&D Elf Names</a></li>
-              <li><a href="#" className="hover:text-elvish-accent transition-colors">Fantasy Names</a></li>
+              <li><a href="/sindarin-names" className="hover:text-elvish-accent transition-colors">Sindarin Names</a></li>
+              <li><a href="/quenya-names" className="hover:text-elvish-accent transition-colors">Quenya Names</a></li>
+              <li><a href="/#generator" className="hover:text-elvish-accent transition-colors">D&D Elf Names</a></li>
+              <li><a href="/#generator" className="hover:text-elvish-accent transition-colors">Fantasy Names</a></li>
             </ul>
           </div>
           

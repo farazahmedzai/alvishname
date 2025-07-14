@@ -94,6 +94,30 @@ export class MemStorage implements IStorage {
       { name: "Olorin", meaning: "Dream", language: "quenya", gender: "male", category: "mystical", pronunciation: "o-LOR-in" },
       { name: "Nienna", meaning: "She who weeps", language: "quenya", gender: "female", category: "mystical", pronunciation: "nee-EN-na" },
       
+      // More Sindarin Names
+      { name: "Celebros", meaning: "Silver foam", language: "sindarin", gender: "male", category: "nature", pronunciation: "ke-LEB-ros" },
+      { name: "Morwenna", meaning: "Dark maiden", language: "sindarin", gender: "female", category: "traditional", pronunciation: "mor-WEN-na" },
+      { name: "Galador", meaning: "Tree lord", language: "sindarin", gender: "male", category: "noble", pronunciation: "GAL-a-dor" },
+      { name: "Nimreth", meaning: "White lady", language: "sindarin", gender: "female", category: "noble", pronunciation: "NIM-reth" },
+      { name: "Thrandion", meaning: "Steadfast lord", language: "sindarin", gender: "male", category: "warrior", pronunciation: "THRAN-dee-on" },
+      { name: "Laerwen", meaning: "Song maiden", language: "sindarin", gender: "female", category: "mystical", pronunciation: "LAY-er-wen" },
+      { name: "Bregolas", meaning: "Fierce leaf", language: "sindarin", gender: "male", category: "warrior", pronunciation: "BREG-oh-las" },
+      { name: "Mithrellas", meaning: "Grey maiden", language: "sindarin", gender: "female", category: "mystical", pronunciation: "mith-REL-las" },
+      { name: "Denethor", meaning: "Lithe man", language: "sindarin", gender: "male", category: "noble", pronunciation: "DEN-e-thor" },
+      { name: "Finduilas", meaning: "Hair of leaves", language: "sindarin", gender: "female", category: "nature", pronunciation: "fin-DUIL-as" },
+      
+      // More Quenya Names  
+      { name: "Elenwë", meaning: "Star maiden", language: "quenya", gender: "female", category: "mystical", pronunciation: "e-LEN-way" },
+      { name: "Turukáno", meaning: "Victorious commander", language: "quenya", gender: "male", category: "warrior", pronunciation: "tu-ru-KAH-no" },
+      { name: "Nerdanel", meaning: "Man-friend", language: "quenya", gender: "female", category: "traditional", pronunciation: "NER-da-nel" },
+      { name: "Maglor", meaning: "Gold fire", language: "quenya", gender: "male", category: "mystical", pronunciation: "MAG-lor" },
+      { name: "Eldalótë", meaning: "Elf flower", language: "quenya", gender: "female", category: "nature", pronunciation: "el-da-LOH-tay" },
+      { name: "Rúmil", meaning: "Red flame", language: "quenya", gender: "male", category: "traditional", pronunciation: "ROO-mil" },
+      { name: "Melian", meaning: "Dear gift", language: "quenya", gender: "female", category: "noble", pronunciation: "MEL-ee-an" },
+      { name: "Curufin", meaning: "Skillful Finwë", language: "quenya", gender: "male", category: "noble", pronunciation: "ku-RU-fin" },
+      { name: "Elwing", meaning: "Star spray", language: "quenya", gender: "female", category: "mystical", pronunciation: "EL-wing" },
+      { name: "Pengolodh", meaning: "Teaching sage", language: "quenya", gender: "male", category: "traditional", pronunciation: "PEN-go-lodh" },
+
       // General Fantasy Names
       { name: "Aelindra", meaning: "Noble song", language: "general", gender: "female", category: "traditional", pronunciation: "ay-LIN-dra" },
       { name: "Thalion", meaning: "Steadfast", language: "general", gender: "male", category: "warrior", pronunciation: "THAL-ee-on" },
@@ -103,6 +127,13 @@ export class MemStorage implements IStorage {
       { name: "Galethion", meaning: "Tree guardian", language: "general", gender: "male", category: "nature", pronunciation: "ga-LETH-ee-on" },
       { name: "Eärendil", meaning: "Sea-lover", language: "general", gender: "male", category: "mystical", pronunciation: "ay-AR-en-dil" },
       { name: "Nimloth", meaning: "White blossom", language: "general", gender: "female", category: "nature", pronunciation: "NIM-loth" },
+      { name: "Valandil", meaning: "Friend of the Valar", language: "general", gender: "male", category: "noble", pronunciation: "va-LAN-dil" },
+      { name: "Silmarien", meaning: "Jewel maiden", language: "general", gender: "female", category: "noble", pronunciation: "sil-MAR-ee-en" },
+      { name: "Thorondir", meaning: "Eagle lord", language: "general", gender: "male", category: "warrior", pronunciation: "thor-ON-deer" },
+      { name: "Lúthien", meaning: "Blossom", language: "general", gender: "female", category: "mystical", pronunciation: "LOO-thee-en" },
+      { name: "Berendir", meaning: "Bold man", language: "general", gender: "male", category: "warrior", pronunciation: "BER-en-deer" },
+      { name: "Morwen", meaning: "Dark maiden", language: "general", gender: "female", category: "traditional", pronunciation: "MOR-wen" },
+      { name: "Elboron", meaning: "Elf steadfast", language: "general", gender: "male", category: "traditional", pronunciation: "EL-bo-ron" },
     ];
 
     names.forEach(name => {

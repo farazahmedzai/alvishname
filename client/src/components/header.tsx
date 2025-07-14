@@ -30,17 +30,23 @@ export default function Header() {
             >
               Generator
             </button>
+            <a 
+              href="/sindarin-names"
+              className="text-elvish-gray hover:text-elvish-accent transition-colors"
+            >
+              Sindarin Names
+            </a>
+            <a 
+              href="/quenya-names"
+              className="text-elvish-gray hover:text-elvish-accent transition-colors"
+            >
+              Quenya Names
+            </a>
             <button 
               onClick={() => scrollToSection('guide')}
               className="text-elvish-gray hover:text-elvish-accent transition-colors"
             >
               Guide
-            </button>
-            <button 
-              onClick={() => scrollToSection('names')}
-              className="text-elvish-gray hover:text-elvish-accent transition-colors"
-            >
-              Popular Names
             </button>
             <button 
               onClick={() => scrollToSection('faq')}
@@ -68,17 +74,23 @@ export default function Header() {
               >
                 Generator
               </button>
+              <a 
+                href="/sindarin-names"
+                className="block w-full text-left text-elvish-gray hover:text-elvish-accent transition-colors py-2"
+              >
+                Sindarin Names
+              </a>
+              <a 
+                href="/quenya-names"
+                className="block w-full text-left text-elvish-gray hover:text-elvish-accent transition-colors py-2"
+              >
+                Quenya Names
+              </a>
               <button 
                 onClick={() => scrollToSection('guide')}
                 className="block w-full text-left text-elvish-gray hover:text-elvish-accent transition-colors py-2"
               >
                 Guide
-              </button>
-              <button 
-                onClick={() => scrollToSection('names')}
-                className="block w-full text-left text-elvish-gray hover:text-elvish-accent transition-colors py-2"
-              >
-                Popular Names
               </button>
               <button 
                 onClick={() => scrollToSection('faq')}
