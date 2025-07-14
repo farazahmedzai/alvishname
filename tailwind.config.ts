@@ -61,6 +61,15 @@ export default {
           border: "var(--sidebar-border)",
           ring: "var(--sidebar-ring)",
         },
+        elvish: {
+          primary: "var(--elvish-primary)",
+          secondary: "var(--elvish-secondary)",
+          accent: "var(--elvish-accent)",
+          dark: "var(--elvish-dark)",
+          surface: "var(--elvish-surface)",
+          light: "var(--elvish-light)",
+          gray: "var(--elvish-gray)",
+        },
       },
       keyframes: {
         "accordion-down": {
