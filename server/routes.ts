@@ -3,6 +3,8 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { generateNamesSchema } from "@shared/schema";
 import { z } from "zod";
+import fs from "fs";
+import path from "path";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Generate Elvish names endpoint
@@ -69,6 +71,31 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       console.error("Error generating names:", error);
       res.status(500).json({ error: "Failed to generate names" });
+    }
+  });
+
+  // SEO static files - serve sitemap.xml and robots.txt directly from file content
+  app.get("/sitemap.xml", async (req, res) => {
+    try {
+      const sitemapPath = path.resolve(process.cwd(), "public", "sitemap.xml");
+      const content = await fs.promises.readFile(sitemapPath, "utf-8");
+      res.type("application/xml");
+      res.send(content);
+    } catch (error) {
+      console.error("Error serving sitemap:", error);
+      res.status(404).send("Sitemap not found");
+    }
+  });
+
+  app.get("/robots.txt", async (req, res) => {
+    try {
+      const robotsPath = path.resolve(process.cwd(), "public", "robots.txt");
+      const content = await fs.promises.readFile(robotsPath, "utf-8");
+      res.type("text/plain");
+      res.send(content);
+    } catch (error) {
+      console.error("Error serving robots.txt:", error);
+      res.status(404).send("Robots.txt not found");
     }
   });
 
