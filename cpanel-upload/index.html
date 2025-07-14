@@ -23,6 +23,13 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://elvishnamegenerator.com" />
     
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    
+    <!-- DNS prefetch for performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D4AF37'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" />
     
@@ -186,6 +193,9 @@
           
           <div style="text-align: center;">
             <button class="btn" onclick="generateNames()">✨ Generate Elvish Names</button>
+            <div style="margin-top: 1rem;">
+              <small style="color: #a0aec0;">Press Enter or click to generate • Your preferences are automatically saved</small>
+            </div>
           </div>
           
           <div id="names-container" class="names-grid" style="display: none;"></div>
@@ -196,22 +206,74 @@
     <!-- Educational Content -->
     <section class="section">
       <div class="container">
-        <h2>The History and Linguistics of Elvish Names</h2>
+        <h2>The Complete Guide to Elvish Names</h2>
         
         <div class="card">
-          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Tolkien's Linguistic Creation</h3>
-          <p>J.R.R. Tolkien, a philologist and professor at Oxford University, created the Elvish languages as complete linguistic systems with their own grammar, vocabulary, and cultural context. His passion for language creation began in his youth and became the foundation for Middle-earth itself.</p>
-          <p>The two primary Elvish languages, Sindarin and Quenya, represent different periods and cultures in Tolkien's fictional history. Sindarin, spoken by the Grey-elves, became the common Elvish tongue in Middle-earth during the Third Age. Quenya, the "High Elvish," was the language of the Valar and the Eldar in Valinor, considered more ancient and formal.</p>
+          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Tolkien's Linguistic Masterwork</h3>
+          <p>J.R.R. Tolkien, a renowned philologist and professor at Oxford University, created the Elvish languages as complete linguistic systems with their own grammar, vocabulary, and cultural context. His passion for language creation began in his youth and became the foundation for Middle-earth itself. Unlike many fantasy authors who create names arbitrarily, Tolkien built his naming systems on solid linguistic principles.</p>
+          <p>The two primary Elvish languages, Sindarin and Quenya, represent different periods and cultures in Tolkien's fictional history. Sindarin, spoken by the Grey-elves, became the common Elvish tongue in Middle-earth during the Third Age. Quenya, the "High Elvish," was the language of the Valar and the Eldar in Valinor, considered more ancient and formal. Each language has distinct phonological patterns, grammatical structures, and cultural associations that influence name formation.</p>
+        </div>
+
+        <div class="card">
+          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Sindarin vs Quenya: Understanding the Differences</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div>
+              <h4 style="color: #e2b547; font-size: 1.25rem; margin-bottom: 1rem;">Sindarin Characteristics</h4>
+              <ul style="color: #a0aec0; list-style-type: disc; padding-left: 1.5rem;">
+                <li>Welsh-inspired phonology with soft, flowing sounds</li>
+                <li>Complex consonant mutations (lenition, nasal mutation)</li>
+                <li>Practical, everyday language of Middle-earth</li>
+                <li>Names often reflect nature and immediate environment</li>
+                <li>Examples: Legolas, Arwen, Thranduil, Galadriel</li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="color: #e2b547; font-size: 1.25rem; margin-bottom: 1rem;">Quenya Characteristics</h4>
+              <ul style="color: #a0aec0; list-style-type: disc; padding-left: 1.5rem;">
+                <li>Finnish-inspired structure with Latin-like formality</li>
+                <li>Rich case system and agglutinative features</li>
+                <li>Language of lore, ceremony, and high culture</li>
+                <li>Names often carry ancient, mystical meanings</li>
+                <li>Examples: Fëanor, Galadriel, Elrond, Celebrimbor</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div class="card">
           <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Understanding Elvish Naming Conventions</h3>
-          <p>Elvish names follow specific phonological patterns that create their distinctive musical quality. Sound patterns and phonetics are carefully arranged, and vowel combinations follow systematic rules that make names both pronounceable and aesthetically pleasing.</p>
-          <p>While not rigidly gendered, Elvish names often contain subtle indicators. Feminine names may include softer sounds and certain endings like -wen, -iel, while masculine names might feature stronger consonants and endings like -ion, -dir, -dur.</p>
+          <p>Elvish names follow specific phonological patterns that create their distinctive musical quality. Sound patterns and phonetics are carefully arranged, and vowel combinations follow systematic rules that make names both pronounceable and aesthetically pleasing. The languages avoid harsh consonant clusters and maintain melodic flow through careful vowel distribution.</p>
+          <p>While not rigidly gendered, Elvish names often contain subtle indicators. Feminine names may include softer sounds and certain endings like -wen (maiden), -iel (daughter), -eth (lady), while masculine names might feature stronger consonants and endings like -ion (son), -dir (man), -dur (dark), -or (lord). However, many names can be used for any gender, reflecting the Elves' more fluid approach to identity.</p>
         </div>
 
         <div class="card">
-          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Popular Elvish Names and Meanings</h3>
+          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Name Categories and Their Meanings</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div style="background: rgba(26, 35, 50, 0.3); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.1);">
+              <h4 style="color: #e2b547; margin-bottom: 1rem;">Traditional Names</h4>
+              <p style="color: #a0aec0; font-size: 0.9rem;">Classic Elvish names from established lineages and noble houses. These names carry historical weight and cultural significance, often passed down through generations of Elven families.</p>
+            </div>
+            <div style="background: rgba(26, 35, 50, 0.3); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.1);">
+              <h4 style="color: #e2b547; margin-bottom: 1rem;">Nature-themed Names</h4>
+              <p style="color: #a0aec0; font-size: 0.9rem;">Names inspired by the natural world - trees, flowers, stars, rivers, and seasonal changes. Reflect the Elves' deep connection to the environment and their role as guardians of nature.</p>
+            </div>
+            <div style="background: rgba(26, 35, 50, 0.3); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.1);">
+              <h4 style="color: #e2b547; margin-bottom: 1rem;">Warrior Names</h4>
+              <p style="color: #a0aec0; font-size: 0.9rem;">Names for Elven warriors and guards, often incorporating elements of strength, courage, protection, and martial prowess. Perfect for D&D fighters, rangers, and paladins.</p>
+            </div>
+            <div style="background: rgba(26, 35, 50, 0.3); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.1);">
+              <h4 style="color: #e2b547; margin-bottom: 1rem;">Noble Names</h4>
+              <p style="color: #a0aec0; font-size: 0.9rem;">Names befitting Elven lords and ladies, often incorporating concepts of leadership, wisdom, nobility, and royal heritage. Ideal for high-ranking characters and aristocratic backgrounds.</p>
+            </div>
+            <div style="background: rgba(26, 35, 50, 0.3); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.1);">
+              <h4 style="color: #e2b547; margin-bottom: 1rem;">Mystical Names</h4>
+              <p style="color: #a0aec0; font-size: 0.9rem;">Names associated with magic, lore, prophecy, and the otherworldly aspects of Elven culture. Perfect for wizards, sorcerers, clerics, and characters with magical abilities.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Popular Elvish Names and Their Linguistic Origins</h3>
           <div style="overflow-x: auto;">
             <table style="width: 100%; border-collapse: collapse;">
               <thead>
@@ -219,7 +281,7 @@
                   <th style="padding: 1rem; text-align: left; color: #d4af37;">Name</th>
                   <th style="padding: 1rem; text-align: left; color: #d4af37;">Meaning</th>
                   <th style="padding: 1rem; text-align: left; color: #d4af37;">Language</th>
-                  <th style="padding: 1rem; text-align: left; color: #d4af37;">Gender</th>
+                  <th style="padding: 1rem; text-align: left; color: #d4af37;">Etymology</th>
                 </tr>
               </thead>
               <tbody>
@@ -227,35 +289,47 @@
                   <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Arwen</td>
                   <td style="padding: 1rem; color: #a0aec0;">Noble maiden</td>
                   <td style="padding: 1rem; color: #a0aec0;">Sindarin</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Female</td>
+                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">ar- (noble) + -wen (maiden)</td>
                 </tr>
                 <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
                   <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Legolas</td>
                   <td style="padding: 1rem; color: #a0aec0;">Green leaves</td>
                   <td style="padding: 1rem; color: #a0aec0;">Sindarin</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Male</td>
+                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">laeg (green) + las (leaf/leaves)</td>
                 </tr>
                 <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
                   <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Galadriel</td>
                   <td style="padding: 1rem; color: #a0aec0;">Maiden crowned with gleaming hair</td>
                   <td style="padding: 1rem; color: #a0aec0;">Sindarin</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Female</td>
+                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">galadh (tree) + rî (crown) + el (star)</td>
                 </tr>
                 <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Finrod</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Noble wanderer</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Quenya</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Male</td>
+                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Elrond</td>
+                  <td style="padding: 1rem; color: #a0aec0;">Star-dome/Vault of heaven</td>
+                  <td style="padding: 1rem; color: #a0aec0;">Sindarin</td>
+                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">êl (star) + rond (vaulted hall)</td>
                 </tr>
                 <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Idril</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Sparkling brilliance</td>
+                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Celebrimbor</td>
+                  <td style="padding: 1rem; color: #a0aec0;">Silver fist</td>
+                  <td style="padding: 1rem; color: #a0aec0;">Sindarin</td>
+                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">celeb (silver) + paur (fist)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
+                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Fëanor</td>
+                  <td style="padding: 1rem; color: #a0aec0;">Spirit of fire</td>
                   <td style="padding: 1rem; color: #a0aec0;">Quenya</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Female</td>
+                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">fëa (spirit) + nár (fire)</td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+
+        <div class="card">
+          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Using Elvish Names in D&D and Fantasy Gaming</h3>
+          <p>Dungeons & Dragons players often seek authentic-sounding Elvish names for their characters, and Tolkien's linguistic framework provides an excellent foundation. When creating an Elven character, consider their background, class, and personality when choosing a name category. A wood elf ranger might have a nature-themed name, while a high elf wizard could carry a mystical or noble name.</p>
+          <p>Our generator provides names suitable for all D&D Elf subraces: High Elves (often Quenya names), Wood Elves (nature-themed Sindarin), Dark Elves/Drow (can use any category with darker meanings), Eladrin (mystical names), and Sea Elves (names with water/ocean themes). Each generated name includes pronunciation guides to help you roleplay your character authentically at the gaming table.</p>
         </div>
       </div>
     </section>
@@ -600,8 +674,99 @@
       `;
       document.head.appendChild(style);
       
-      // Generate initial names on page load
-      window.addEventListener('load', generateNames);
+      // Advanced features for better user engagement
+      function shareNames() {
+        const generatedNames = document.querySelectorAll('.name-card h4');
+        if (generatedNames.length > 0) {
+          const namesList = Array.from(generatedNames).map(el => el.textContent).join(', ');
+          const shareText = `Check out these Elvish names I generated: ${namesList} - Created with Elvish Name Generator`;
+          
+          if (navigator.share) {
+            navigator.share({
+              title: 'My Elvish Names',
+              text: shareText,
+              url: window.location.href
+            });
+          } else if (navigator.clipboard) {
+            navigator.clipboard.writeText(shareText).then(() => {
+              showToast('Names and link copied to clipboard!');
+            });
+          }
+        }
+      }
+      
+      // Add keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && e.target.tagName !== 'BUTTON') {
+          const generateBtn = document.querySelector('.btn');
+          if (generateBtn) generateBtn.click();
+        }
+      });
+      
+      // Track user preferences for better experience
+      function saveUserPreferences() {
+        const preferences = {
+          gender: document.getElementById('gender').value,
+          language: document.getElementById('language').value,
+          category: document.getElementById('category').value
+        };
+        localStorage.setItem('elvish-preferences', JSON.stringify(preferences));
+      }
+      
+      function loadUserPreferences() {
+        const saved = localStorage.getItem('elvish-preferences');
+        if (saved) {
+          try {
+            const preferences = JSON.parse(saved);
+            document.getElementById('gender').value = preferences.gender || 'any';
+            document.getElementById('language').value = preferences.language || 'sindarin';
+            document.getElementById('category').value = preferences.category || 'traditional';
+          } catch (e) {
+            console.log('Could not load preferences');
+          }
+        }
+      }
+      
+      // Save preferences when changed
+      document.getElementById('gender').addEventListener('change', saveUserPreferences);
+      document.getElementById('language').addEventListener('change', saveUserPreferences);
+      document.getElementById('category').addEventListener('change', saveUserPreferences);
+      
+      // Enhanced analytics tracking (privacy-friendly)
+      function trackUsage(action, details = {}) {
+        // Simple client-side analytics without personal data
+        const usage = JSON.parse(localStorage.getItem('elvish-usage') || '{}');
+        const today = new Date().toISOString().split('T')[0];
+        
+        if (!usage[today]) usage[today] = {};
+        if (!usage[today][action]) usage[today][action] = 0;
+        usage[today][action]++;
+        
+        // Keep only last 7 days
+        const week = Object.keys(usage).sort().slice(-7);
+        const weekUsage = {};
+        week.forEach(day => weekUsage[day] = usage[day]);
+        
+        localStorage.setItem('elvish-usage', JSON.stringify(weekUsage));
+      }
+      
+      // Initialize and generate names
+      window.addEventListener('load', function() {
+        loadUserPreferences();
+        generateNames();
+        trackUsage('page_load');
+      });
+      
+      // Override generate function to include tracking
+      const originalGenerate = generateNames;
+      generateNames = function() {
+        saveUserPreferences();
+        trackUsage('generate_names', {
+          language: document.getElementById('language').value,
+          category: document.getElementById('category').value
+        });
+        originalGenerate();
+      };
     </script>
   </body>
 </html>

@@ -1,0 +1,25 @@
+# Google Analytics Setup Instructions
+
+## If you want to add Google Analytics to track your SEO success:
+
+1. Create a Google Analytics 4 property for elvishnamegenerator.com
+2. Get your Measurement ID (starts with G-)
+3. Add this code to the <head> section of index.html, after the existing meta tags:
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+
+4. Replace GA_MEASUREMENT_ID with your actual ID
+5. This will track:
+   - Page views
+   - User engagement
+   - Name generation events
+   - Search rankings impact
+
+Note: The site already includes privacy-friendly local analytics tracking that doesn't collect personal data.
