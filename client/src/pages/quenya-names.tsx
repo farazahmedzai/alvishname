@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,6 +14,75 @@ import type { ElvishName, GenerateNamesRequest } from "@shared/schema";
 
 export default function QuenyaNames() {
   const { toast } = useToast();
+  
+  // Update document metadata and schema for Quenya page
+  useEffect(() => {
+    // Update title and meta description
+    document.title = "Quenya Name Generator - Free High Elvish Names from LOTR";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Generate authentic Quenya (High Elvish) names from Valinor. Free LOTR name generator with meanings and pronunciations. Perfect for D&D characters and fantasy writing.');
+    }
+    
+    // Update canonical URL
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://elvishnamegenerator.com/quenya-names');
+    }
+    
+    // Add page-specific schema markup
+    const existingSchema = document.querySelector('#quenya-page-schema');
+    if (!existingSchema) {
+      const schemaScript = document.createElement('script');
+      schemaScript.id = 'quenya-page-schema';
+      schemaScript.type = 'application/ld+json';
+      schemaScript.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Quenya Name Generator",
+        "description": "Generate authentic Quenya (High Elvish) names from Valinor with meanings and pronunciations",
+        "url": "https://elvishnamegenerator.com/quenya-names",
+        "mainEntity": {
+          "@type": "WebApplication",
+          "name": "Quenya Name Generator",
+          "description": "Interactive tool to generate authentic Quenya elvish names",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          }
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://elvishnamegenerator.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Quenya Names",
+              "item": "https://elvishnamegenerator.com/quenya-names"
+            }
+          ]
+        }
+      });
+      document.head.appendChild(schemaScript);
+    }
+    
+    // Cleanup function to remove schema when component unmounts
+    return () => {
+      const schema = document.querySelector('#quenya-page-schema');
+      if (schema) {
+        schema.remove();
+      }
+    };
+  }, []);
   const [formData, setFormData] = useState<GenerateNamesRequest>({
     gender: "any",
     language: "quenya",

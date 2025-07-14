@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/header";
 import Generator from "@/components/generator";
 import EducationalContent from "@/components/educational-content";
@@ -5,6 +6,29 @@ import FAQSection from "@/components/faq-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
+  // Reset document metadata and schema for home page
+  useEffect(() => {
+    // Reset title and meta description to default
+    document.title = "Elvish Name Generator - Free LOTR & Fantasy Elf Names with Meanings";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Generate authentic Elvish names inspired by Tolkien\'s LOTR. Free Sindarin & Quenya elf name generator with meanings. Perfect for D&D, fantasy writing & gaming.');
+    }
+    
+    // Reset canonical URL
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://elvishnamegenerator.com');
+    }
+    
+    // Remove any page-specific schema markup
+    const sindarinSchema = document.querySelector('#sindarin-page-schema');
+    const quenyaSchema = document.querySelector('#quenya-page-schema');
+    if (sindarinSchema) sindarinSchema.remove();
+    if (quenyaSchema) quenyaSchema.remove();
+  }, []);
+
   return (
     <div className="min-h-screen bg-elvish-dark text-elvish-light font-inter antialiased">
       {/* Background Elements */}

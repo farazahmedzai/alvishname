@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,6 +14,75 @@ import type { ElvishName, GenerateNamesRequest } from "@shared/schema";
 
 export default function SindarinNames() {
   const { toast } = useToast();
+  
+  // Update document metadata and schema for Sindarin page
+  useEffect(() => {
+    // Update title and meta description
+    document.title = "Sindarin Name Generator - Free Grey-Elvish Names from LOTR";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Generate authentic Sindarin (Grey-elvish) names from Middle-earth. Free LOTR name generator with meanings and pronunciations. Perfect for D&D characters and fantasy writing.');
+    }
+    
+    // Update canonical URL
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', 'https://elvishnamegenerator.com/sindarin-names');
+    }
+    
+    // Add page-specific schema markup
+    const existingSchema = document.querySelector('#sindarin-page-schema');
+    if (!existingSchema) {
+      const schemaScript = document.createElement('script');
+      schemaScript.id = 'sindarin-page-schema';
+      schemaScript.type = 'application/ld+json';
+      schemaScript.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Sindarin Name Generator",
+        "description": "Generate authentic Sindarin (Grey-elvish) names from Middle-earth with meanings and pronunciations",
+        "url": "https://elvishnamegenerator.com/sindarin-names",
+        "mainEntity": {
+          "@type": "WebApplication",
+          "name": "Sindarin Name Generator",
+          "description": "Interactive tool to generate authentic Sindarin elvish names",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0"
+          }
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://elvishnamegenerator.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Sindarin Names",
+              "item": "https://elvishnamegenerator.com/sindarin-names"
+            }
+          ]
+        }
+      });
+      document.head.appendChild(schemaScript);
+    }
+    
+    // Cleanup function to remove schema when component unmounts
+    return () => {
+      const schema = document.querySelector('#sindarin-page-schema');
+      if (schema) {
+        schema.remove();
+      }
+    };
+  }, []);
   const [formData, setFormData] = useState<GenerateNamesRequest>({
     gender: "any",
     language: "sindarin",
