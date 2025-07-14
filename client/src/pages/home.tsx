@@ -22,11 +22,34 @@ export default function Home() {
       canonical.setAttribute('href', 'https://elvishnamegenerator.com');
     }
     
-    // Remove any page-specific schema markup
+    // Remove any page-specific schema markup and reset breadcrumbs
     const sindarinSchema = document.querySelector('#sindarin-page-schema');
     const quenyaSchema = document.querySelector('#quenya-page-schema');
     if (sindarinSchema) sindarinSchema.remove();
     if (quenyaSchema) quenyaSchema.remove();
+    
+    // Reset breadcrumb schema to home page
+    const breadcrumbSchema = document.querySelector('#breadcrumb-schema');
+    if (breadcrumbSchema) {
+      breadcrumbSchema.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://elvishnamegenerator.com"
+          },
+          {
+            "@type": "ListItem", 
+            "position": 2,
+            "name": "Elvish Name Generator",
+            "item": "https://elvishnamegenerator.com#generator"
+          }
+        ]
+      });
+    }
   }, []);
 
   return (

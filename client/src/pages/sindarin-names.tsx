@@ -31,7 +31,30 @@ export default function SindarinNames() {
       canonical.setAttribute('href', 'https://elvishnamegenerator.com/sindarin-names');
     }
     
-    // Add page-specific schema markup
+    // Update breadcrumb schema instead of creating duplicate
+    const breadcrumbSchema = document.querySelector('#breadcrumb-schema');
+    if (breadcrumbSchema) {
+      breadcrumbSchema.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://elvishnamegenerator.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Sindarin Names",
+            "item": "https://elvishnamegenerator.com/sindarin-names"
+          }
+        ]
+      });
+    }
+    
+    // Add page-specific WebPage schema (not WebApplication to avoid duplication)
     const existingSchema = document.querySelector('#sindarin-page-schema');
     if (!existingSchema) {
       const schemaScript = document.createElement('script');
@@ -43,33 +66,10 @@ export default function SindarinNames() {
         "name": "Sindarin Name Generator",
         "description": "Generate authentic Sindarin (Grey-elvish) names from Middle-earth with meanings and pronunciations",
         "url": "https://elvishnamegenerator.com/sindarin-names",
-        "mainEntity": {
-          "@type": "WebApplication",
-          "name": "Sindarin Name Generator",
-          "description": "Interactive tool to generate authentic Sindarin elvish names",
-          "applicationCategory": "UtilityApplication",
-          "operatingSystem": "Any",
-          "offers": {
-            "@type": "Offer",
-            "price": "0"
-          }
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://elvishnamegenerator.com"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Sindarin Names",
-              "item": "https://elvishnamegenerator.com/sindarin-names"
-            }
-          ]
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Elvish Name Generator",
+          "url": "https://elvishnamegenerator.com"
         }
       });
       document.head.appendChild(schemaScript);

@@ -31,7 +31,30 @@ export default function QuenyaNames() {
       canonical.setAttribute('href', 'https://elvishnamegenerator.com/quenya-names');
     }
     
-    // Add page-specific schema markup
+    // Update breadcrumb schema instead of creating duplicate
+    const breadcrumbSchema = document.querySelector('#breadcrumb-schema');
+    if (breadcrumbSchema) {
+      breadcrumbSchema.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://elvishnamegenerator.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Quenya Names",
+            "item": "https://elvishnamegenerator.com/quenya-names"
+          }
+        ]
+      });
+    }
+    
+    // Add page-specific WebPage schema (not WebApplication to avoid duplication)
     const existingSchema = document.querySelector('#quenya-page-schema');
     if (!existingSchema) {
       const schemaScript = document.createElement('script');
@@ -40,36 +63,13 @@ export default function QuenyaNames() {
       schemaScript.textContent = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Quenya Name Generator",
+        "name": "Quenya Name Generator", 
         "description": "Generate authentic Quenya (High Elvish) names from Valinor with meanings and pronunciations",
         "url": "https://elvishnamegenerator.com/quenya-names",
-        "mainEntity": {
-          "@type": "WebApplication",
-          "name": "Quenya Name Generator",
-          "description": "Interactive tool to generate authentic Quenya elvish names",
-          "applicationCategory": "UtilityApplication",
-          "operatingSystem": "Any",
-          "offers": {
-            "@type": "Offer",
-            "price": "0"
-          }
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://elvishnamegenerator.com"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Quenya Names",
-              "item": "https://elvishnamegenerator.com/quenya-names"
-            }
-          ]
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Elvish Name Generator",
+          "url": "https://elvishnamegenerator.com"
         }
       });
       document.head.appendChild(schemaScript);
