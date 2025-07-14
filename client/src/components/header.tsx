@@ -42,6 +42,12 @@ export default function Header() {
             >
               Quenya Names
             </a>
+            <a 
+              href="/about"
+              className="text-elvish-gray hover:text-elvish-accent transition-colors"
+            >
+              About
+            </a>
             <button 
               onClick={() => scrollToSection('guide')}
               className="text-elvish-gray hover:text-elvish-accent transition-colors"

@@ -47,16 +47,21 @@ export default function Footer() {
           <div>
             <h4 className="font-cinzel text-lg font-medium text-elvish-light mb-4">Resources</h4>
             <ul className="space-y-2 text-elvish-gray">
-              <li><a href="#" className="hover:text-elvish-accent transition-colors">Name Meanings</a></li>
-              <li><a href="#" className="hover:text-elvish-accent transition-colors">Pronunciation Guide</a></li>
-              <li><a href="#" className="hover:text-elvish-accent transition-colors">Naming Conventions</a></li>
-              <li><a href="#" className="hover:text-elvish-accent transition-colors">Cultural Guide</a></li>
+              <li><a href="/about" className="hover:text-elvish-accent transition-colors">About Us</a></li>
+              <li><a href="/privacy" className="hover:text-elvish-accent transition-colors">Privacy Policy</a></li>
+              <li><a href="/#guide" className="hover:text-elvish-accent transition-colors">Pronunciation Guide</a></li>
+              <li><a href="/#faq" className="hover:text-elvish-accent transition-colors">FAQ</a></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-elvish-accent/20 mt-8 pt-8 text-center text-elvish-gray">
-          <p>&copy; 2024 Elvish Name Generator. Created with respect for Tolkien's linguistic legacy.</p>
+          <p>&copy; 2025 Elvish Name Generator. Created with respect for Tolkien's linguistic legacy.</p>
+          <div className="mt-2 space-x-4">
+            <a href="/privacy" className="hover:text-elvish-accent transition-colors">Privacy Policy</a>
+            <span>•</span>
+            <a href="/about" className="hover:text-elvish-accent transition-colors">About</a>
+          </div>
         </div>
       </div>
     </footer>

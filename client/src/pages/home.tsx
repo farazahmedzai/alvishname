@@ -25,8 +25,12 @@ export default function Home() {
     // Remove any page-specific schema markup and reset breadcrumbs
     const sindarinSchema = document.querySelector('#sindarin-page-schema');
     const quenyaSchema = document.querySelector('#quenya-page-schema');
+    const aboutSchema = document.querySelector('#about-page-schema');
+    const privacySchema = document.querySelector('#privacy-page-schema');
     if (sindarinSchema) sindarinSchema.remove();
     if (quenyaSchema) quenyaSchema.remove();
+    if (aboutSchema) aboutSchema.remove();
+    if (privacySchema) privacySchema.remove();
     
     // Reset breadcrumb schema to home page
     const breadcrumbSchema = document.querySelector('#breadcrumb-schema');

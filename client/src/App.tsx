@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import SindarinNames from "@/pages/sindarin-names";
 import QuenyaNames from "@/pages/quenya-names";
+import About from "@/pages/about";
+import Privacy from "@/pages/privacy";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -14,6 +16,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/sindarin-names" component={SindarinNames} />
       <Route path="/quenya-names" component={QuenyaNames} />
+      <Route path="/about" component={About} />
+      <Route path="/privacy" component={Privacy} />
       <Route component={NotFound} />
     </Switch>
   );
