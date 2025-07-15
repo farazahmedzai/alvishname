@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import Header from "@/components/header";
+import Breadcrumbs from "@/components/breadcrumbs";
+import SchemaManager from "@/components/schema-manager";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, BookOpen, Users, Shield } from "lucide-react";
@@ -72,7 +74,14 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-elvish-dark via-elvish-surface to-elvish-dark">
+      <SchemaManager 
+        pageType="about" 
+        title="About Us - Elvish Name Generator | Our Mission & Story"
+        description="Learn about our mission to preserve Tolkien's linguistic legacy through authentic Elvish name generation. Discover our commitment to accuracy and cultural respect."
+      />
+      
       <Header />
+      <Breadcrumbs />
       
       <main className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

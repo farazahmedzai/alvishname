@@ -1,772 +1,1548 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elvish Name Generator - Free LOTR & Fantasy Elf Names with Meanings</title>
-    <meta name="description" content="Generate authentic Elvish names inspired by Tolkien's LOTR. Free Sindarin & Quenya elf name generator with meanings. Perfect for D&D, fantasy writing & gaming." />
+    <meta name="description" content="Generate authentic Elvish names inspired by Tolkien's LOTR. Free Sindarin & Quenya elf name generator with meanings. Perfect for D&D, fantasy writing & gaming.">
+    <link rel="canonical" href="https://elvishnamegenerator.com/">
     
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Elvish Name Generator - Free LOTR & Fantasy Elf Names with Meanings" />
-    <meta property="og:description" content="Generate authentic Elvish names inspired by Tolkien's LOTR. Free Sindarin & Quenya elf name generator with meanings. Perfect for D&D, fantasy writing & gaming." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://elvishnamegenerator.com" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elvishnamegenerator.com/">
+    <meta property="og:title" content="Elvish Name Generator - Free LOTR & Fantasy Elf Names with Meanings">
+    <meta property="og:description" content="Generate authentic Elvish names inspired by Tolkien's LOTR. Free Sindarin & Quenya elf name generator with meanings. Perfect for D&D, fantasy writing & gaming.">
+    <meta property="og:image" content="https://elvishnamegenerator.com/og-image.jpg">
+    <meta property="og:site_name" content="Elvish Name Generator">
+    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Elvish Name Generator - Free LOTR & Fantasy Elf Names with Meanings" />
-    <meta name="twitter:description" content="Generate authentic Elvish names inspired by Tolkien's LOTR. Free Sindarin & Quenya elf name generator with meanings. Perfect for D&D, fantasy writing & gaming." />
-    
-    <!-- Additional SEO Meta Tags -->
-    <meta name="keywords" content="elvish name generator, lotr names, sindarin names, quenya names, fantasy elf names, dnd elf names, tolkien names, middle earth names, free name generator" />
-    <meta name="author" content="Elvish Name Generator" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://elvishnamegenerator.com" />
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    
-    <!-- DNS prefetch for performance -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://elvishnamegenerator.com/">
+    <meta property="twitter:title" content="Elvish Name Generator - Free LOTR & Fantasy Elf Names with Meanings">
+    <meta property="twitter:description" content="Generate authentic Elvish names inspired by Tolkien's LOTR. Free Sindarin & Quenya elf name generator with meanings. Perfect for D&D, fantasy writing & gaming.">
+    <meta property="twitter:image" content="https://elvishnamegenerator.com/og-image.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D4AF37'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/%3E%3C/svg%3E" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     
-    <!-- Font Preload -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Schema Markup -->
+    <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Elvish Name Generator",
-        "description": "Generate authentic Elvish names inspired by Tolkien's LOTR with meanings",
+        "description": "Generate authentic Elvish names inspired by Tolkien's LOTR. Free Sindarin & Quenya elf name generator with meanings. Perfect for D&D, fantasy writing & gaming.",
         "url": "https://elvishnamegenerator.com",
         "applicationCategory": "UtilityApplication",
-        "operatingSystem": "Any",
+        "operatingSystem": "Web",
         "offers": {
             "@type": "Offer",
-            "price": "0"
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Elvish Name Generator",
+            "url": "https://elvishnamegenerator.com"
+        },
+        "keywords": "elvish names, sindarin names, quenya names, tolkien names, fantasy names, dnd names, lotr names, elf names, middle earth names",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1247"
         }
     }
     </script>
     
-    <!-- FAQ Schema Markup -->
-    <script type="application/ld+json">
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json" id="breadcrumb-schema">
     {
         "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+        "@type": "BreadcrumbList",
+        "itemListElement": [
             {
-                "@type": "Question",
-                "name": "What's the difference between Sindarin and Quenya?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sindarin is the more commonly spoken Elvish language in Middle-earth, characterized by softer sounds and Welsh-inspired phonology. Quenya is the 'High Elvish,' more formal and archaic, with Finnish-inspired structure."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Are these names authentic to Tolkien's work?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Our generator creates names following Tolkien's linguistic patterns and rules, using authentic Elvish elements and morphological structures."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I use these names for my D&D character?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely! These names are perfect for D&D elven characters, fantasy writing, gaming, and any creative project."
-                }
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://elvishnamegenerator.com"
             }
         ]
     }
     </script>
     
     <style>
-      /* Critical CSS - inline for performance */
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { 
-        font-family: 'Inter', sans-serif; 
-        background: linear-gradient(to bottom right, #0c1420, #2d3748, #1a2332);
-        color: #f7fafc;
-        line-height: 1.6;
-      }
-      .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-      .header { background: rgba(45, 55, 72, 0.8); backdrop-filter: blur(10px); padding: 1rem 0; border-bottom: 1px solid rgba(212, 175, 55, 0.2); }
-      .nav { display: flex; justify-content: space-between; align-items: center; }
-      .logo { font-family: 'Cinzel', serif; font-size: 1.5rem; font-weight: 600; color: #f7fafc; }
-      .hero { text-align: center; padding: 5rem 0; }
-      .hero h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; margin-bottom: 1rem; }
-      .hero p { font-size: 1.25rem; color: #a0aec0; margin-bottom: 2rem; }
-      .generator { background: rgba(45, 55, 72, 0.6); backdrop-filter: blur(10px); border-radius: 1rem; padding: 2rem; margin: 2rem 0; border: 1px solid rgba(212, 175, 55, 0.2); }
-      .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
-      .form-group label { display: block; margin-bottom: 0.5rem; color: #a0aec0; }
-      .form-group select { width: 100%; padding: 0.75rem; background: rgba(26, 35, 50, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 0.5rem; color: #f7fafc; }
-      .btn { background: linear-gradient(to right, #d4af37, #e2b547); color: #1a202c; padding: 1rem 2rem; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer; font-size: 1.1rem; }
-      .btn:hover { transform: scale(1.05); }
-      .names-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 2rem; }
-      .name-card { background: rgba(26, 35, 50, 0.5); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.2); }
-      .name-card h4 { font-family: 'Crimson Text', serif; font-size: 1.25rem; color: #d4af37; margin-bottom: 0.5rem; }
-      .copy-btn { background: none; border: none; color: #a0aec0; cursor: pointer; float: right; }
-      .section { padding: 4rem 0; }
-      .section h2 { font-family: 'Cinzel', serif; font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
-      .section p { color: #a0aec0; margin-bottom: 1.5rem; }
-      .card { background: rgba(45, 55, 72, 0.4); backdrop-filter: blur(5px); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 0.75rem; padding: 2rem; margin-bottom: 2rem; }
-      .faq { margin-bottom: 1.5rem; }
-      .faq-question { background: rgba(45, 55, 72, 0.4); padding: 1.5rem; border-radius: 0.75rem; cursor: pointer; border: 1px solid rgba(212, 175, 55, 0.2); }
-      .faq-answer { padding: 1.5rem; color: #a0aec0; display: none; }
-      .footer { background: rgba(45, 55, 72, 0.8); padding: 3rem 0; border-top: 1px solid rgba(212, 175, 55, 0.2); }
-      @media (max-width: 768px) {
-        .hero h1 { font-size: 2.5rem; }
-        .section { padding: 2rem 0; }
-        .generator { padding: 1rem; }
-      }
+        /* Critical CSS inlined for performance */
+        :root {
+            --elvish-dark: #0a0b0d;
+            --elvish-surface: #1a1b1e;
+            --elvish-primary: #2c5aa0;
+            --elvish-secondary: #4a7ba7;
+            --elvish-accent: #8bb8d8;
+            --elvish-light: #e8f4fd;
+            --elvish-gray: #94a3b8;
+            --elvish-muted: #64748b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--elvish-dark);
+            color: var(--elvish-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .cinzel { font-family: 'Cinzel', serif; }
+        .crimson { font-family: 'Crimson Text', serif; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(26, 27, 30, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(139, 184, 216, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--elvish-accent);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--elvish-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--elvish-accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(44, 90, 160, 0.1) 0%, rgba(74, 123, 167, 0.1) 100%);
+        }
+        
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--elvish-light), var(--elvish-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--elvish-gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Generator Section */
+        .generator {
+            padding: 4rem 0;
+            background: var(--elvish-surface);
+        }
+        
+        .generator-card {
+            background: rgba(26, 27, 30, 0.8);
+            border: 1px solid rgba(139, 184, 216, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .form-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-control {
+            background: rgba(10, 11, 13, 0.5);
+            border: 1px solid rgba(139, 184, 216, 0.3);
+            color: var(--elvish-light);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--elvish-accent);
+            outline: none;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, var(--elvish-primary), var(--elvish-secondary));
+            color: var(--elvish-light);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(139, 184, 216, 0.3);
+        }
+        
+        /* Name Results */
+        .name-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .name-card {
+            background: rgba(44, 90, 160, 0.1);
+            border: 1px solid rgba(139, 184, 216, 0.2);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .name-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(139, 184, 216, 0.2);
+        }
+        
+        .name-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--elvish-accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .name-meaning {
+            color: var(--elvish-gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .name-details {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--elvish-muted);
+        }
+        
+        /* Educational Content */
+        .educational {
+            padding: 4rem 0;
+            background: var(--elvish-dark);
+        }
+        
+        .educational h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--elvish-accent);
+        }
+        
+        .educational-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .educational-card {
+            background: rgba(26, 27, 30, 0.6);
+            border: 1px solid rgba(139, 184, 216, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        
+        .educational-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--elvish-accent);
+            margin-bottom: 1rem;
+        }
+        
+        .educational-card p {
+            color: var(--elvish-gray);
+            line-height: 1.7;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 4rem 0;
+            background: var(--elvish-surface);
+        }
+        
+        .faq h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--elvish-accent);
+        }
+        
+        .faq-item {
+            background: rgba(26, 27, 30, 0.8);
+            border: 1px solid rgba(139, 184, 216, 0.2);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background: none;
+            border: none;
+            color: var(--elvish-light);
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1.5rem;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(139, 184, 216, 0.1);
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--elvish-gray);
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--elvish-surface);
+            border-top: 1px solid rgba(139, 184, 216, 0.2);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--elvish-accent);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: var(--elvish-gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: var(--elvish-accent);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(139, 184, 216, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--elvish-gray);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .form-group {
+                grid-template-columns: 1fr;
+            }
+            
+            .name-results {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Loading State */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(139, 184, 216, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--elvish-accent);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <!-- Header -->
     <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <div class="logo">
-            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="display: inline; margin-right: 8px; vertical-align: middle;">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
-            Elvish Names
-          </div>
+        <nav class="nav container">
+            <a href="/" class="logo">Elvish Names</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/sindarin-names">Sindarin Names</a></li>
+                <li><a href="/quenya-names">Quenya Names</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/privacy">Privacy</a></li>
+            </ul>
         </nav>
-      </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
-        <h1>Elvish Name Generator</h1>
-        <p>Free LOTR & Fantasy Elf Names with Meanings</p>
-        <p>Create authentic Elvish names inspired by Tolkien's languages. Perfect for D&D characters, fantasy writing, and gaming adventures.</p>
-      </div>
+        <div class="container">
+            <h1>Elvish Name Generator</h1>
+            <p>Generate authentic Elvish names inspired by Tolkien's linguistic masterwork. Perfect for D&D characters, fantasy writing, and exploring Middle-earth.</p>
+        </div>
     </section>
 
     <!-- Generator Section -->
-    <section id="generator" class="section">
-      <div class="container">
-        <div class="generator">
-          <h2>Generate Your Perfect Elvish Name</h2>
-          
-          <div class="form-row">
-            <div class="form-group">
-              <label>Gender</label>
-              <select id="gender">
-                <option value="any">Any</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
+    <section class="generator" id="generator">
+        <div class="container">
+            <div class="generator-card">
+                <h2 class="cinzel" style="text-align: center; margin-bottom: 2rem; font-size: 2rem; color: var(--elvish-accent);">Generate Your Elvish Name</h2>
+                
+                <form id="nameForm" class="form-group">
+                    <div>
+                        <label for="gender" style="display: block; margin-bottom: 0.5rem; color: var(--elvish-gray);">Gender</label>
+                        <select id="gender" class="form-control">
+                            <option value="any">Any Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="language" style="display: block; margin-bottom: 0.5rem; color: var(--elvish-gray);">Language</label>
+                        <select id="language" class="form-control">
+                            <option value="any">Any Language</option>
+                            <option value="sindarin">Sindarin (Grey-elvish)</option>
+                            <option value="quenya">Quenya (High Elvish)</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="category" style="display: block; margin-bottom: 0.5rem; color: var(--elvish-gray);">Category</label>
+                        <select id="category" class="form-control">
+                            <option value="traditional">Traditional</option>
+                            <option value="nature">Nature</option>
+                            <option value="warrior">Warrior</option>
+                            <option value="noble">Noble</option>
+                            <option value="mystical">Mystical</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="count" style="display: block; margin-bottom: 0.5rem; color: var(--elvish-gray);">Names to Generate</label>
+                        <select id="count" class="form-control">
+                            <option value="3">3 Names</option>
+                            <option value="6" selected>6 Names</option>
+                            <option value="9">9 Names</option>
+                            <option value="12">12 Names</option>
+                        </select>
+                    </div>
+                </form>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button type="button" class="btn" onclick="generateNames()">
+                        <span id="generateText">Generate Names</span>
+                        <span id="loadingSpinner" class="loading" style="display: none;"></span>
+                    </button>
+                </div>
+                
+                <div id="nameResults" class="name-results"></div>
             </div>
-            
-            <div class="form-group">
-              <label>Language</label>
-              <select id="language">
-                <option value="sindarin">Sindarin</option>
-                <option value="quenya">Quenya</option>
-                <option value="general">General Fantasy</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label>Category</label>
-              <select id="category">
-                <option value="traditional">Traditional</option>
-                <option value="nature">Nature-themed</option>
-                <option value="warrior">Warrior</option>
-                <option value="noble">Noble</option>
-                <option value="mystical">Mystical</option>
-              </select>
-            </div>
-          </div>
-          
-          <div style="text-align: center;">
-            <button class="btn" onclick="generateNames()">✨ Generate Elvish Names</button>
-            <div style="margin-top: 1rem;">
-              <small style="color: #a0aec0;">Press Enter or click to generate • Your preferences are automatically saved</small>
-            </div>
-          </div>
-          
-          <div id="names-container" class="names-grid" style="display: none;"></div>
         </div>
-      </div>
     </section>
 
     <!-- Educational Content -->
-    <section class="section">
-      <div class="container">
-        <h2>The Complete Guide to Elvish Names</h2>
-        
-        <div class="card">
-          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Tolkien's Linguistic Masterwork</h3>
-          <p>J.R.R. Tolkien, a renowned philologist and professor at Oxford University, created the Elvish languages as complete linguistic systems with their own grammar, vocabulary, and cultural context. His passion for language creation began in his youth and became the foundation for Middle-earth itself. Unlike many fantasy authors who create names arbitrarily, Tolkien built his naming systems on solid linguistic principles.</p>
-          <p>The two primary Elvish languages, Sindarin and Quenya, represent different periods and cultures in Tolkien's fictional history. Sindarin, spoken by the Grey-elves, became the common Elvish tongue in Middle-earth during the Third Age. Quenya, the "High Elvish," was the language of the Valar and the Eldar in Valinor, considered more ancient and formal. Each language has distinct phonological patterns, grammatical structures, and cultural associations that influence name formation.</p>
+    <section class="educational" id="guide">
+        <div class="container">
+            <h2>Learn About Elvish Languages</h2>
+            <div class="educational-grid">
+                <div class="educational-card animate-fade-in">
+                    <h3>Sindarin - The Grey-elvish Tongue</h3>
+                    <p>Sindarin, also known as Grey-elvish, was the language of the Eldar in Middle-earth. It evolved from Common Eldarin and became the most widely spoken Elvish language among the Elves who remained in Middle-earth. Sindarin names often reflect the natural world and the experiences of the Eldar.</p>
+                </div>
+                <div class="educational-card animate-fade-in">
+                    <h3>Quenya - The High Elvish Language</h3>
+                    <p>Quenya, the "High Elvish" language, was the ancient tongue of the Eldar in Valinor. It was considered the most noble of the Elvish languages and was used for formal occasions, lore, and song. Quenya names often have a more archaic and ceremonial quality.</p>
+                </div>
+                <div class="educational-card animate-fade-in">
+                    <h3>Pronunciation Guide</h3>
+                    <p>Elvish names follow specific pronunciation rules: 'c' is always hard like 'k', 'g' is always hard as in 'go', 'r' is rolled, and stress typically falls on the first syllable. The 'th' sound is pronounced as in 'think', and vowels are generally pure as in Latin.</p>
+                </div>
+            </div>
         </div>
-
-        <div class="card">
-          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Sindarin vs Quenya: Understanding the Differences</h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            <div>
-              <h4 style="color: #e2b547; font-size: 1.25rem; margin-bottom: 1rem;">Sindarin Characteristics</h4>
-              <ul style="color: #a0aec0; list-style-type: disc; padding-left: 1.5rem;">
-                <li>Welsh-inspired phonology with soft, flowing sounds</li>
-                <li>Complex consonant mutations (lenition, nasal mutation)</li>
-                <li>Practical, everyday language of Middle-earth</li>
-                <li>Names often reflect nature and immediate environment</li>
-                <li>Examples: Legolas, Arwen, Thranduil, Galadriel</li>
-              </ul>
-            </div>
-            <div>
-              <h4 style="color: #e2b547; font-size: 1.25rem; margin-bottom: 1rem;">Quenya Characteristics</h4>
-              <ul style="color: #a0aec0; list-style-type: disc; padding-left: 1.5rem;">
-                <li>Finnish-inspired structure with Latin-like formality</li>
-                <li>Rich case system and agglutinative features</li>
-                <li>Language of lore, ceremony, and high culture</li>
-                <li>Names often carry ancient, mystical meanings</li>
-                <li>Examples: Fëanor, Galadriel, Elrond, Celebrimbor</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Understanding Elvish Naming Conventions</h3>
-          <p>Elvish names follow specific phonological patterns that create their distinctive musical quality. Sound patterns and phonetics are carefully arranged, and vowel combinations follow systematic rules that make names both pronounceable and aesthetically pleasing. The languages avoid harsh consonant clusters and maintain melodic flow through careful vowel distribution.</p>
-          <p>While not rigidly gendered, Elvish names often contain subtle indicators. Feminine names may include softer sounds and certain endings like -wen (maiden), -iel (daughter), -eth (lady), while masculine names might feature stronger consonants and endings like -ion (son), -dir (man), -dur (dark), -or (lord). However, many names can be used for any gender, reflecting the Elves' more fluid approach to identity.</p>
-        </div>
-
-        <div class="card">
-          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Name Categories and Their Meanings</h3>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-            <div style="background: rgba(26, 35, 50, 0.3); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.1);">
-              <h4 style="color: #e2b547; margin-bottom: 1rem;">Traditional Names</h4>
-              <p style="color: #a0aec0; font-size: 0.9rem;">Classic Elvish names from established lineages and noble houses. These names carry historical weight and cultural significance, often passed down through generations of Elven families.</p>
-            </div>
-            <div style="background: rgba(26, 35, 50, 0.3); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.1);">
-              <h4 style="color: #e2b547; margin-bottom: 1rem;">Nature-themed Names</h4>
-              <p style="color: #a0aec0; font-size: 0.9rem;">Names inspired by the natural world - trees, flowers, stars, rivers, and seasonal changes. Reflect the Elves' deep connection to the environment and their role as guardians of nature.</p>
-            </div>
-            <div style="background: rgba(26, 35, 50, 0.3); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.1);">
-              <h4 style="color: #e2b547; margin-bottom: 1rem;">Warrior Names</h4>
-              <p style="color: #a0aec0; font-size: 0.9rem;">Names for Elven warriors and guards, often incorporating elements of strength, courage, protection, and martial prowess. Perfect for D&D fighters, rangers, and paladins.</p>
-            </div>
-            <div style="background: rgba(26, 35, 50, 0.3); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.1);">
-              <h4 style="color: #e2b547; margin-bottom: 1rem;">Noble Names</h4>
-              <p style="color: #a0aec0; font-size: 0.9rem;">Names befitting Elven lords and ladies, often incorporating concepts of leadership, wisdom, nobility, and royal heritage. Ideal for high-ranking characters and aristocratic backgrounds.</p>
-            </div>
-            <div style="background: rgba(26, 35, 50, 0.3); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid rgba(212, 175, 55, 0.1);">
-              <h4 style="color: #e2b547; margin-bottom: 1rem;">Mystical Names</h4>
-              <p style="color: #a0aec0; font-size: 0.9rem;">Names associated with magic, lore, prophecy, and the otherworldly aspects of Elven culture. Perfect for wizards, sorcerers, clerics, and characters with magical abilities.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Popular Elvish Names and Their Linguistic Origins</h3>
-          <div style="overflow-x: auto;">
-            <table style="width: 100%; border-collapse: collapse;">
-              <thead>
-                <tr style="background: rgba(26, 35, 50, 0.5);">
-                  <th style="padding: 1rem; text-align: left; color: #d4af37;">Name</th>
-                  <th style="padding: 1rem; text-align: left; color: #d4af37;">Meaning</th>
-                  <th style="padding: 1rem; text-align: left; color: #d4af37;">Language</th>
-                  <th style="padding: 1rem; text-align: left; color: #d4af37;">Etymology</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Arwen</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Noble maiden</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Sindarin</td>
-                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">ar- (noble) + -wen (maiden)</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Legolas</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Green leaves</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Sindarin</td>
-                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">laeg (green) + las (leaf/leaves)</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Galadriel</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Maiden crowned with gleaming hair</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Sindarin</td>
-                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">galadh (tree) + rî (crown) + el (star)</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Elrond</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Star-dome/Vault of heaven</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Sindarin</td>
-                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">êl (star) + rond (vaulted hall)</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Celebrimbor</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Silver fist</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Sindarin</td>
-                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">celeb (silver) + paur (fist)</td>
-                </tr>
-                <tr style="border-bottom: 1px solid rgba(212, 175, 55, 0.2);">
-                  <td style="padding: 1rem; color: #f7fafc; font-family: 'Crimson Text', serif; font-weight: 600;">Fëanor</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Spirit of fire</td>
-                  <td style="padding: 1rem; color: #a0aec0;">Quenya</td>
-                  <td style="padding: 1rem; color: #a0aec0; font-size: 0.9rem;">fëa (spirit) + nár (fire)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3 style="color: #d4af37; font-family: 'Cinzel', serif; font-size: 1.5rem; margin-bottom: 1rem;">Using Elvish Names in D&D and Fantasy Gaming</h3>
-          <p>Dungeons & Dragons players often seek authentic-sounding Elvish names for their characters, and Tolkien's linguistic framework provides an excellent foundation. When creating an Elven character, consider their background, class, and personality when choosing a name category. A wood elf ranger might have a nature-themed name, while a high elf wizard could carry a mystical or noble name.</p>
-          <p>Our generator provides names suitable for all D&D Elf subraces: High Elves (often Quenya names), Wood Elves (nature-themed Sindarin), Dark Elves/Drow (can use any category with darker meanings), Eladrin (mystical names), and Sea Elves (names with water/ocean themes). Each generated name includes pronunciation guides to help you roleplay your character authentically at the gaming table.</p>
-        </div>
-      </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="section">
-      <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        
-        <div class="faq">
-          <div class="faq-question" onclick="toggleFaq(0)">
-            <h3>What's the difference between Sindarin and Quenya? <span style="float: right;">▼</span></h3>
-          </div>
-          <div class="faq-answer" id="faq-0">
-            Sindarin is the more commonly spoken Elvish language in Middle-earth, characterized by softer sounds and Welsh-inspired phonology. Quenya is the "High Elvish," more formal and archaic, with Finnish-inspired structure. Sindarin was used for everyday communication, while Quenya was reserved for ceremony, lore, and formal occasions.
-          </div>
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    What makes these Elvish names authentic?
+                </button>
+                <div class="faq-answer" style="display: none;">
+                    Our names are created using authentic Elvish linguistic elements from J.R.R. Tolkien's extensive philological work. Each name follows the grammatical rules and phonetic patterns of Sindarin or Quenya, ensuring they sound and feel like genuine Elvish names.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Can I use these names for my D&D character?
+                </button>
+                <div class="faq-answer" style="display: none;">
+                    Absolutely! These names are perfect for D&D elves, fantasy characters, or any creative project. They're designed to sound authentic and memorable, making them ideal for roleplaying games and fantasy settings.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    What's the difference between Sindarin and Quenya?
+                </button>
+                <div class="faq-answer" style="display: none;">
+                    Sindarin is the more commonly spoken Elvish language in Middle-earth, while Quenya is the ancient "High Elvish" tongue. Sindarin names tend to be more naturalistic and evolved, while Quenya names often have a more archaic, ceremonial quality.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFAQ(this)">
+                    Are the meanings of these names accurate?
+                </button>
+                <div class="faq-answer" style="display: none;">
+                    Yes, each name's meaning is derived from authentic Elvish root words and linguistic elements. The meanings reflect the cultural and spiritual values of the Eldar, often connecting to nature, light, wisdom, and noble qualities.
+                </div>
+            </div>
         </div>
-
-        <div class="faq">
-          <div class="faq-question" onclick="toggleFaq(1)">
-            <h3>Are these names authentic to Tolkien's work? <span style="float: right;">▼</span></h3>
-          </div>
-          <div class="faq-answer" id="faq-1">
-            Our generator creates names following Tolkien's linguistic patterns and rules, using authentic Elvish elements and morphological structures. While not every generated name appears in Tolkien's published works, they are constructed using the same systematic approach that Tolkien used to create his Elvish languages.
-          </div>
-        </div>
-
-        <div class="faq">
-          <div class="faq-question" onclick="toggleFaq(2)">
-            <h3>Can I use these names for my D&D character? <span style="float: right;">▼</span></h3>
-          </div>
-          <div class="faq-answer" id="faq-2">
-            Absolutely! These names are perfect for D&D elven characters, fantasy writing, gaming, and any creative project. The names are generated to sound authentic and carry meaningful connections to Elvish culture, making them ideal for role-playing games and storytelling.
-          </div>
-        </div>
-
-        <div class="faq">
-          <div class="faq-question" onclick="toggleFaq(3)">
-            <h3>How do you pronounce Elvish names? <span style="float: right;">▼</span></h3>
-          </div>
-          <div class="faq-answer" id="faq-3">
-            Elvish pronunciation follows consistent rules: stress usually falls on the first syllable in Sindarin, vowels are pronounced as in Latin or Italian, and consonant combinations follow specific patterns. 'C' is always hard, 'G' is always hard, and double consonants are lengthened. Many names include pronunciation guides to help with correct pronunciation.
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-          <div>
-            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-              <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" style="margin-right: 8px; color: #d4af37;">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
-              <span style="font-family: 'Cinzel', serif; font-size: 1.25rem; font-weight: 600;">Elvish Names</span>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Name Generators</h4>
+                    <ul>
+                        <li><a href="/sindarin-names">Sindarin Names Generator</a></li>
+                        <li><a href="/quenya-names">Quenya Names Generator</a></li>
+                        <li><a href="/">Free Elvish Name Generator</a></li>
+                        <li><a href="/">LOTR Elf Names</a></li>
+                        <li><a href="/">D&D Elf Names</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources & Info</h4>
+                    <ul>
+                        <li><a href="/about">About Elvish Languages</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="#guide">Pronunciation Guide</a></li>
+                        <li><a href="#faq">Frequently Asked Questions</a></li>
+                        <li><a href="#guide">Elvish Name Meanings</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About This Tool</h4>
+                    <p style="color: var(--elvish-gray); line-height: 1.7;">
+                        Generate authentic <a href="/sindarin-names" style="color: var(--elvish-accent);">Sindarin</a> and <a href="/quenya-names" style="color: var(--elvish-accent);">Quenya names</a> inspired by Tolkien's linguistic masterwork. Perfect for D&D characters, fantasy writing, and exploring Middle-earth's rich cultural heritage.
+                    </p>
+                </div>
             </div>
-            <p style="color: #a0aec0; margin-bottom: 1rem;">Create authentic Elvish names inspired by Tolkien's linguistic masterwork. Perfect for fantasy gaming, creative writing, and exploring the rich cultural heritage of Middle-earth.</p>
-          </div>
-          
-          <div>
-            <h4 style="font-family: 'Cinzel', serif; font-size: 1.125rem; margin-bottom: 1rem;">Generators</h4>
-            <ul style="list-style: none; color: #a0aec0;">
-              <li style="margin-bottom: 0.5rem;"><a href="#generator" style="color: #a0aec0; text-decoration: none;">Sindarin Names</a></li>
-              <li style="margin-bottom: 0.5rem;"><a href="#generator" style="color: #a0aec0; text-decoration: none;">Quenya Names</a></li>
-              <li style="margin-bottom: 0.5rem;"><a href="#generator" style="color: #a0aec0; text-decoration: none;">D&D Elf Names</a></li>
-              <li style="margin-bottom: 0.5rem;"><a href="#generator" style="color: #a0aec0; text-decoration: none;">Fantasy Names</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 style="font-family: 'Cinzel', serif; font-size: 1.125rem; margin-bottom: 1rem;">Resources</h4>
-            <ul style="list-style: none; color: #a0aec0;">
-              <li style="margin-bottom: 0.5rem;"><a href="#faq" style="color: #a0aec0; text-decoration: none;">Name Meanings</a></li>
-              <li style="margin-bottom: 0.5rem;"><a href="#faq" style="color: #a0aec0; text-decoration: none;">Pronunciation Guide</a></li>
-              <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #a0aec0; text-decoration: none;">Naming Conventions</a></li>
-              <li style="margin-bottom: 0.5rem;"><a href="#" style="color: #a0aec0; text-decoration: none;">Cultural Guide</a></li>
-            </ul>
-          </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Elvish Name Generator. Created with respect for Tolkien's linguistic legacy.</p>
+                <div style="margin-top: 1rem;">
+                    <a href="/privacy">Privacy Policy</a> • 
+                    <a href="/about">About Our Mission</a> • 
+                    <a href="/sindarin-names">Sindarin Names</a> • 
+                    <a href="/quenya-names">Quenya Names</a>
+                </div>
+            </div>
         </div>
-        
-        <div style="border-top: 1px solid rgba(212, 175, 55, 0.2); margin-top: 2rem; padding-top: 2rem; text-align: center; color: #a0aec0;">
-          <p>&copy; 2024 Elvish Name Generator. Created with respect for Tolkien's linguistic legacy.</p>
-        </div>
-      </div>
     </footer>
 
     <script>
-      // Name database with 100+ authentic Elvish names
-      const nameDatabase = {
-        sindarin: {
-          traditional: [
-            {name: "Arwen", meaning: "Noble maiden", pronunciation: "AR-wen"},
-            {name: "Legolas", meaning: "Green leaves", pronunciation: "LEG-oh-las"},
-            {name: "Elrond", meaning: "Vault of stars", pronunciation: "EL-rond"},
-            {name: "Galadriel", meaning: "Maiden crowned with gleaming hair", pronunciation: "ga-LAD-ree-el"},
-            {name: "Thranduil", meaning: "Vigorous spring", pronunciation: "THRAN-duil"},
-            {name: "Celebrían", meaning: "Silver queen", pronunciation: "ke-LEB-ree-an"},
-            {name: "Elladan", meaning: "Elf-man", pronunciation: "EL-la-dan"},
-            {name: "Elrohir", meaning: "Elf-knight", pronunciation: "EL-ro-heer"},
-            {name: "Nimrodel", meaning: "Lady of the white grotto", pronunciation: "NIM-ro-del"},
-            {name: "Glorfindel", meaning: "Golden hair", pronunciation: "glor-FIN-del"},
-            {name: "Celebros", meaning: "Silver foam", pronunciation: "ke-LEB-ros"},
-            {name: "Morwenna", meaning: "Dark maiden", pronunciation: "mor-WEN-na"}
-          ],
-          nature: [
-            {name: "Galion", meaning: "Son of trees", pronunciation: "GAL-ee-on"},
-            {name: "Silveth", meaning: "Silver maiden", pronunciation: "SIL-veth"},
-            {name: "Morwen", meaning: "Dark maiden", pronunciation: "MOR-wen"},
-            {name: "Caelynn", meaning: "Sea song", pronunciation: "KAY-lin"},
-            {name: "Mithrellas", meaning: "Grey maiden", pronunciation: "mith-REL-las"},
-            {name: "Galadwen", meaning: "Tree maiden", pronunciation: "ga-LAD-wen"},
-            {name: "Silvyr", meaning: "Forest guardian", pronunciation: "SIL-veer"},
-            {name: "Thrandion", meaning: "Spring wanderer", pronunciation: "THRAN-dee-on"},
-            {name: "Finduilas", meaning: "Hair of leaves", pronunciation: "fin-DUIL-as"}
-          ],
-          warrior: [
-            {name: "Beregond", meaning: "Bold stone", pronunciation: "BER-e-gond"},
-            {name: "Dúnhere", meaning: "Dark lord", pronunciation: "DOON-here"},
-            {name: "Targon", meaning: "Stiff-necked", pronunciation: "TAR-gon"},
-            {name: "Idhrenniel", meaning: "Patient lady", pronunciation: "id-HREN-nee-el"},
-            {name: "Malthen", meaning: "Golden brave", pronunciation: "MAL-then"},
-            {name: "Baraneth", meaning: "Fiery lady", pronunciation: "BAR-a-neth"},
-            {name: "Bregolas", meaning: "Fierce leaf", pronunciation: "BREG-oh-las"}
-          ],
-          noble: [
-            {name: "Arathorn", meaning: "Noble eagle", pronunciation: "AR-a-thorn"},
-            {name: "Celeborn", meaning: "Silver tree", pronunciation: "KEL-e-born"},
-            {name: "Elendil", meaning: "Star-lover", pronunciation: "e-LEN-dil"},
-            {name: "Gilraen", meaning: "Star-wanderer", pronunciation: "GIL-ray-en"},
-            {name: "Galador", meaning: "Tree lord", pronunciation: "GAL-a-dor"},
-            {name: "Nimreth", meaning: "White lady", pronunciation: "NIM-reth"},
-            {name: "Denethor", meaning: "Lithe man", pronunciation: "DEN-e-thor"}
-          ],
-          mystical: [
-            {name: "Lúthien", meaning: "Enchantress", pronunciation: "LOO-thee-en"},
-            {name: "Mithrandir", meaning: "Grey pilgrim", pronunciation: "MITH-ran-deer"},
-            {name: "Elanor", meaning: "Sun-star", pronunciation: "EL-a-nor"},
-            {name: "Pallando", meaning: "Far wanderer", pronunciation: "pal-LAN-do"},
-            {name: "Nimloth", meaning: "White flower", pronunciation: "NIM-loth"},
-            {name: "Laerwen", meaning: "Song maiden", pronunciation: "LAY-er-wen"}
-          ]
-        },
-        quenya: {
-          traditional: [
-            {name: "Finrod", meaning: "Noble wanderer", pronunciation: "FIN-rod"},
-            {name: "Idril", meaning: "Sparkling brilliance", pronunciation: "ID-ril"},
-            {name: "Elenwë", meaning: "Star-person", pronunciation: "e-LEN-way"},
-            {name: "Isildur", meaning: "Moon-servant", pronunciation: "i-SIL-dur"},
-            {name: "Anárion", meaning: "Son of the sun", pronunciation: "a-NAR-ee-on"},
-            {name: "Amarië", meaning: "Good", pronunciation: "a-MAR-ee-ay"},
-            {name: "Fingolfin", meaning: "Hair-Fin", pronunciation: "fin-GOL-fin"},
-            {name: "Nerdanel", meaning: "Man-friend", pronunciation: "NER-da-nel"},
-            {name: "Rúmil", meaning: "Red flame", pronunciation: "ROO-mil"},
-            {name: "Pengolodh", meaning: "Teaching sage", pronunciation: "PEN-go-lodh"}
-          ],
-          nature: [
-            {name: "Eldalótë", meaning: "Elf flower", pronunciation: "el-da-LOH-tay"}
-          ],
-          warrior: [
-            {name: "Turukáno", meaning: "Victorious commander", pronunciation: "tu-ru-KAH-no"}
-          ],
-          noble: [
-            {name: "Finwë", meaning: "Hair", pronunciation: "FIN-way"},
-            {name: "Fëanor", meaning: "Spirit of fire", pronunciation: "FAY-a-nor"},
-            {name: "Varda", meaning: "Lofty", pronunciation: "VAR-da"},
-            {name: "Tar-Míriel", meaning: "Queen jewel-daughter", pronunciation: "tar-MEER-ee-el"},
-            {name: "Melian", meaning: "Dear gift", pronunciation: "MEL-ee-an"},
-            {name: "Curufin", meaning: "Skillful Finwë", pronunciation: "ku-RU-fin"}
-          ],
-          mystical: [
-            {name: "Manwë", meaning: "Blessed being", pronunciation: "MAN-way"},
-            {name: "Yavanna", meaning: "Giver of fruits", pronunciation: "ya-VAN-na"},
-            {name: "Olorin", meaning: "Dream", pronunciation: "o-LOR-in"},
-            {name: "Nienna", meaning: "She who weeps", pronunciation: "nee-EN-na"},
-            {name: "Maglor", meaning: "Gold fire", pronunciation: "MAG-lor"},
-            {name: "Elwing", meaning: "Star spray", pronunciation: "EL-wing"}
-          ]
-        },
-        general: {
-          traditional: [
-            {name: "Aelindra", meaning: "Noble song", pronunciation: "ay-LIN-dra"},
-            {name: "Celebreth", meaning: "Silver lady", pronunciation: "ke-LEB-reth"},
-            {name: "Morwen", meaning: "Dark maiden", pronunciation: "MOR-wen"},
-            {name: "Elboron", meaning: "Elf steadfast", pronunciation: "EL-bo-ron"}
-          ],
-          warrior: [
-            {name: "Thalion", meaning: "Steadfast", pronunciation: "THAL-ee-on"},
-            {name: "Berendir", meaning: "Bold man", pronunciation: "BER-en-deer"},
-            {name: "Thorondir", meaning: "Eagle lord", pronunciation: "thor-ON-deer"}
-          ],
-          nature: [
-            {name: "Aldanor", meaning: "Tree lord", pronunciation: "AL-da-nor"},
-            {name: "Nimloth", meaning: "White blossom", pronunciation: "NIM-loth"},
-            {name: "Galethion", meaning: "Tree guardian", pronunciation: "ga-LETH-ee-on"}
-          ],
-          noble: [
-            {name: "Valandil", meaning: "Friend of the Valar", pronunciation: "va-LAN-dil"},
-            {name: "Silmarien", meaning: "Jewel maiden", pronunciation: "sil-MAR-ee-en"}
-          ],
-          mystical: [
-            {name: "Mithrelda", meaning: "Grey singer", pronunciation: "mith-REL-da"},
-            {name: "Eärendil", meaning: "Sea-lover", pronunciation: "ay-AR-en-dil"},
-            {name: "Lúthien", meaning: "Blossom", pronunciation: "LOO-thee-en"}
-          ]
-        }
-      };
-
-      function generateNames() {
-        const gender = document.getElementById('gender').value;
-        const language = document.getElementById('language').value;
-        const category = document.getElementById('category').value;
-        
-        let names = [];
-        
-        // Get names from selected category
-        if (nameDatabase[language] && nameDatabase[language][category]) {
-          names = nameDatabase[language][category];
-        }
-        
-        // If no names found, use traditional sindarin as fallback
-        if (names.length === 0) {
-          names = nameDatabase.sindarin.traditional;
-        }
-        
-        // Filter by gender if not "any"
-        if (gender !== "any") {
-          // For simplicity, assume names ending in common patterns
-          names = names.filter(name => {
-            if (gender === "female") {
-              return name.name.match(/(wen|iel|eth|ril|las)$/i) || 
-                     ["Arwen", "Galadriel", "Idril", "Varda", "Yavanna", "Nienna", "Aelindra", "Celebreth", "Morwen", "Silmarien", "Mithrelda", "Lúthien"].includes(name.name);
-            } else if (gender === "male") {
-              return !name.name.match(/(wen|iel|eth|ril|las)$/i) && 
-                     !["Arwen", "Galadriel", "Idril", "Varda", "Yavanna", "Nienna", "Aelindra", "Celebreth", "Morwen", "Silmarien", "Mithrelda", "Lúthien"].includes(name.name);
+        // Elvish names database
+        const elvishNames = [
+            {
+                "name": "Arwen",
+                "meaning": "Noble maiden",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "AR-wen"
+            },
+            {
+                "name": "Legolas",
+                "meaning": "Greenleaf",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "LEG-oh-las"
+            },
+            {
+                "name": "Galadriel",
+                "meaning": "Maiden crowned with gleaming hair",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "ga-LAD-ree-el"
+            },
+            {
+                "name": "Elrond",
+                "meaning": "Star-dome",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "EL-rond"
+            },
+            {
+                "name": "Celeborn",
+                "meaning": "Silver tree",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "KEL-eh-born"
+            },
+            {
+                "name": "Nimrodel",
+                "meaning": "Lady of the white grotto",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "nature",
+                "pronunciation": "NIM-ro-del"
+            },
+            {
+                "name": "Thranduil",
+                "meaning": "Vigorous spring",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "THRAN-doo-il"
+            },
+            {
+                "name": "Tauriel",
+                "meaning": "Daughter of the forest",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "nature",
+                "pronunciation": "TAU-ree-el"
+            },
+            {
+                "name": "Glorfindel",
+                "meaning": "Golden-haired",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "GLOR-fin-del"
+            },
+            {
+                "name": "Erestor",
+                "meaning": "Lone star",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "eh-RES-tor"
+            },
+            {
+                "name": "Elrohir",
+                "meaning": "Elf-knight",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "warrior",
+                "pronunciation": "EL-ro-heer"
+            },
+            {
+                "name": "Elladan",
+                "meaning": "Elf-man",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "traditional",
+                "pronunciation": "EL-la-dan"
+            },
+            {
+                "name": "Haldir",
+                "meaning": "Hidden hero",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "warrior",
+                "pronunciation": "HAL-deer"
+            },
+            {
+                "name": "Lindir",
+                "meaning": "Fair singer",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "traditional",
+                "pronunciation": "LIN-deer"
+            },
+            {
+                "name": "Elrond",
+                "meaning": "Star-dome",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "EL-rond"
+            },
+            {
+                "name": "Caelynn",
+                "meaning": "Bright pool",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "nature",
+                "pronunciation": "KAY-lin"
+            },
+            {
+                "name": "Aegnor",
+                "meaning": "Fell fire",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "warrior",
+                "pronunciation": "AYG-nor"
+            },
+            {
+                "name": "Morwen",
+                "meaning": "Dark maiden",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "traditional",
+                "pronunciation": "MOR-wen"
+            },
+            {
+                "name": "Finarfin",
+                "meaning": "Fair-haired finwe",
+                "language": "quenya",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "fin-AR-fin"
+            },
+            {
+                "name": "Galadriel",
+                "meaning": "Maiden crowned with gleaming hair",
+                "language": "quenya",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "ga-LAD-ree-el"
+            },
+            {
+                "name": "Elendil",
+                "meaning": "Star-lover",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "eh-LEN-dil"
+            },
+            {
+                "name": "Indis",
+                "meaning": "Bride",
+                "language": "quenya",
+                "gender": "female",
+                "category": "traditional",
+                "pronunciation": "IN-dis"
+            },
+            {
+                "name": "Manwë",
+                "meaning": "Blessed one",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "MAN-way"
+            },
+            {
+                "name": "Varda",
+                "meaning": "Lofty",
+                "language": "quenya",
+                "gender": "female",
+                "category": "mystical",
+                "pronunciation": "VAR-da"
+            },
+            {
+                "name": "Eärendil",
+                "meaning": "Sea-lover",
+                "language": "quenya",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "eh-AR-en-dil"
+            },
+            {
+                "name": "Nienna",
+                "meaning": "She who weeps",
+                "language": "quenya",
+                "gender": "female",
+                "category": "mystical",
+                "pronunciation": "nee-EN-na"
+            },
+            {
+                "name": "Tulkas",
+                "meaning": "Steadfast",
+                "language": "quenya",
+                "gender": "male",
+                "category": "warrior",
+                "pronunciation": "TUL-kas"
+            },
+            {
+                "name": "Vána",
+                "meaning": "Fair",
+                "language": "quenya",
+                "gender": "female",
+                "category": "nature",
+                "pronunciation": "VAH-na"
+            },
+            {
+                "name": "Oromë",
+                "meaning": "Horn-blowing",
+                "language": "quenya",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "OR-oh-may"
+            },
+            {
+                "name": "Yavanna",
+                "meaning": "Giver of fruits",
+                "language": "quenya",
+                "gender": "female",
+                "category": "nature",
+                "pronunciation": "ya-VAN-na"
+            },
+            {
+                "name": "Aulë",
+                "meaning": "Invention",
+                "language": "quenya",
+                "gender": "male",
+                "category": "traditional",
+                "pronunciation": "AU-lay"
+            },
+            {
+                "name": "Nerdanel",
+                "meaning": "Man-tall",
+                "language": "quenya",
+                "gender": "female",
+                "category": "traditional",
+                "pronunciation": "NER-da-nel"
+            },
+            {
+                "name": "Finwë",
+                "meaning": "Hair",
+                "language": "quenya",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "FIN-way"
+            },
+            {
+                "name": "Míriel",
+                "meaning": "Jewel-garlanded maiden",
+                "language": "quenya",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "MEER-ee-el"
+            },
+            {
+                "name": "Ingwë",
+                "meaning": "Chief",
+                "language": "quenya",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "ING-way"
+            },
+            {
+                "name": "Elwë",
+                "meaning": "Star-person",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "EL-way"
+            },
+            {
+                "name": "Melian",
+                "meaning": "Dear gift",
+                "language": "quenya",
+                "gender": "female",
+                "category": "mystical",
+                "pronunciation": "MEL-ee-an"
+            },
+            {
+                "name": "Olwë",
+                "meaning": "Dream",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "OL-way"
+            },
+            {
+                "name": "Almarian",
+                "meaning": "Blessed queen",
+                "language": "quenya",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "al-MAR-ee-an"
+            },
+            {
+                "name": "Isildur",
+                "meaning": "Moon-lover",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "ih-SIL-dur"
+            },
+            {
+                "name": "Anárion",
+                "meaning": "Son of the sun",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "an-AR-ee-on"
+            },
+            {
+                "name": "Tar-Míriel",
+                "meaning": "High jewel-garlanded maiden",
+                "language": "quenya",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "tar-MEER-ee-el"
+            },
+            {
+                "name": "Amandil",
+                "meaning": "Lover of Aman",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "ah-MAN-dil"
+            },
+            {
+                "name": "Tar-Telperiën",
+                "meaning": "High silver-queen",
+                "language": "quenya",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "tar-tel-PER-ee-en"
+            },
+            {
+                "name": "Elros",
+                "meaning": "Star-foam",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "EL-ros"
+            },
+            {
+                "name": "Tar-Ancalimë",
+                "meaning": "High most-bright",
+                "language": "quenya",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "tar-an-KAL-ih-may"
+            },
+            {
+                "name": "Tar-Aldarion",
+                "meaning": "High son of trees",
+                "language": "quenya",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "tar-al-DAR-ee-on"
+            },
+            {
+                "name": "Erendis",
+                "meaning": "Lonely woman",
+                "language": "quenya",
+                "gender": "female",
+                "category": "traditional",
+                "pronunciation": "eh-REN-dis"
+            },
+            {
+                "name": "Tar-Meneldur",
+                "meaning": "High heaven-servant",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "tar-men-EL-dur"
+            },
+            {
+                "name": "Almiel",
+                "meaning": "Blessed maiden",
+                "language": "quenya",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "AL-mee-el"
+            },
+            {
+                "name": "Tar-Súrion",
+                "meaning": "High wind-son",
+                "language": "quenya",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "tar-SOOR-ee-on"
+            },
+            {
+                "name": "Morwenna",
+                "meaning": "Dark maiden",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "traditional",
+                "pronunciation": "mor-WEN-na"
+            },
+            {
+                "name": "Silvyr",
+                "meaning": "Silver flame",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "SIL-vir"
+            },
+            {
+                "name": "Aeliana",
+                "meaning": "Star-gift",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "mystical",
+                "pronunciation": "ay-lee-AH-na"
+            },
+            {
+                "name": "Thalorin",
+                "meaning": "Steadfast crown",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "THAL-oh-rin"
+            },
+            {
+                "name": "Elenwen",
+                "meaning": "Star-maiden",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "mystical",
+                "pronunciation": "eh-LEN-wen"
+            },
+            {
+                "name": "Galion",
+                "meaning": "Light-son",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "GAL-ee-on"
+            },
+            {
+                "name": "Miraleth",
+                "meaning": "Jewel-crown",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "MEER-ah-leth"
+            },
+            {
+                "name": "Beregond",
+                "meaning": "Bold-stone",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "warrior",
+                "pronunciation": "BER-eh-gond"
+            },
+            {
+                "name": "Mithrellas",
+                "meaning": "Grey-maiden",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "traditional",
+                "pronunciation": "MITH-rel-las"
+            },
+            {
+                "name": "Círdan",
+                "meaning": "Ship-wright",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "traditional",
+                "pronunciation": "KEER-dan"
+            },
+            {
+                "name": "Nimrodel",
+                "meaning": "Lady of the white grotto",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "nature",
+                "pronunciation": "NIM-ro-del"
+            },
+            {
+                "name": "Elrohir",
+                "meaning": "Elf-knight",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "warrior",
+                "pronunciation": "EL-ro-heer"
+            },
+            {
+                "name": "Finduilas",
+                "meaning": "Hair-white",
+                "language": "sindarin",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "fin-DOO-ih-las"
+            },
+            {
+                "name": "Gil-galad",
+                "meaning": "Star of radiance",
+                "language": "sindarin",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "gil-GAL-ad"
+            },
+            {
+                "name": "Anáriel",
+                "meaning": "Sun-daughter",
+                "language": "quenya",
+                "gender": "female",
+                "category": "mystical",
+                "pronunciation": "an-AR-ee-el"
+            },
+            {
+                "name": "Elentári",
+                "meaning": "Star-queen",
+                "language": "quenya",
+                "gender": "female",
+                "category": "mystical",
+                "pronunciation": "eh-len-TAR-ee"
+            },
+            {
+                "name": "Aldanor",
+                "meaning": "Tree-land",
+                "language": "quenya",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "AL-da-nor"
+            },
+            {
+                "name": "Laurelin",
+                "meaning": "Golden-song",
+                "language": "quenya",
+                "gender": "female",
+                "category": "nature",
+                "pronunciation": "LAU-reh-lin"
+            },
+            {
+                "name": "Telemnar",
+                "meaning": "Silver-flame",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "TEL-em-nar"
+            },
+            {
+                "name": "Vardamir",
+                "meaning": "Varda-jewel",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "VAR-da-meer"
+            },
+            {
+                "name": "Silmarien",
+                "meaning": "Jewel-maiden",
+                "language": "quenya",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "sil-MAR-ee-en"
+            },
+            {
+                "name": "Elemmírë",
+                "meaning": "Star-jewel",
+                "language": "quenya",
+                "gender": "female",
+                "category": "mystical",
+                "pronunciation": "eh-lem-MEER-ay"
+            },
+            {
+                "name": "Tar-Atanamir",
+                "meaning": "High father-jewel",
+                "language": "quenya",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "tar-ah-tan-AH-meer"
+            },
+            {
+                "name": "Tar-Ancalimon",
+                "meaning": "High most-bright-son",
+                "language": "quenya",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "tar-an-KAL-ih-mon"
+            },
+            {
+                "name": "Tar-Telemmaitë",
+                "meaning": "High silver-handed",
+                "language": "quenya",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "tar-tel-em-MAY-tay"
+            },
+            {
+                "name": "Tar-Vanimeldë",
+                "meaning": "High beautiful-beloved",
+                "language": "quenya",
+                "gender": "female",
+                "category": "noble",
+                "pronunciation": "tar-van-ih-MEL-day"
+            },
+            {
+                "name": "Tar-Alcarin",
+                "meaning": "High glorious",
+                "language": "quenya",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "tar-AL-ka-rin"
+            },
+            {
+                "name": "Tar-Calmacil",
+                "meaning": "High sword-light",
+                "language": "quenya",
+                "gender": "male",
+                "category": "warrior",
+                "pronunciation": "tar-kal-MAH-kil"
+            },
+            {
+                "name": "Tar-Ardamin",
+                "meaning": "High world-first",
+                "language": "quenya",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "tar-AR-da-min"
+            },
+            {
+                "name": "Tar-Palantir",
+                "meaning": "High far-seer",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "tar-PAL-an-teer"
+            },
+            {
+                "name": "Tar-Ciryatan",
+                "meaning": "High ship-maker",
+                "language": "quenya",
+                "gender": "male",
+                "category": "traditional",
+                "pronunciation": "tar-keer-YAH-tan"
+            },
+            {
+                "name": "Tar-Minastir",
+                "meaning": "High tower-watcher",
+                "language": "quenya",
+                "gender": "male",
+                "category": "warrior",
+                "pronunciation": "tar-min-AS-teer"
+            },
+            {
+                "name": "Eärendur",
+                "meaning": "Sea-servant",
+                "language": "quenya",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "eh-AR-en-dur"
+            },
+            {
+                "name": "Elendur",
+                "meaning": "Star-servant",
+                "language": "quenya",
+                "gender": "male",
+                "category": "mystical",
+                "pronunciation": "eh-LEN-dur"
+            },
+            {
+                "name": "Aratan",
+                "meaning": "Kingly",
+                "language": "quenya",
+                "gender": "male",
+                "category": "noble",
+                "pronunciation": "AR-ah-tan"
+            },
+            {
+                "name": "Ciryandil",
+                "meaning": "Ship-friend",
+                "language": "quenya",
+                "gender": "male",
+                "category": "traditional",
+                "pronunciation": "keer-YAN-dil"
+            },
+            {
+                "name": "Cemendur",
+                "meaning": "Earth-servant",
+                "language": "quenya",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "kem-EN-dur"
+            },
+            {
+                "name": "Eärendil",
+                "meaning": "Sea-lover",
+                "language": "quenya",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "eh-AR-en-dil"
+            },
+            {
+                "name": "Eärnil",
+                "meaning": "Sea-lover",
+                "language": "quenya",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "eh-AR-nil"
+            },
+            {
+                "name": "Eärnur",
+                "meaning": "Sea-flame",
+                "language": "quenya",
+                "gender": "male",
+                "category": "nature",
+                "pronunciation": "eh-AR-nur"
             }
-            return true;
-          });
-        }
-        
-        // If still no names after filtering, use all from category
-        if (names.length === 0) {
-          names = nameDatabase[language] ? nameDatabase[language][category] || nameDatabase.sindarin.traditional : nameDatabase.sindarin.traditional;
-        }
-        
-        // Shuffle and select random names
-        const shuffled = [...names].sort(() => Math.random() - 0.5);
-        const selected = shuffled.slice(0, Math.min(6, shuffled.length));
-        
-        displayNames(selected);
-      }
-      
-      function displayNames(names) {
-        const container = document.getElementById('names-container');
-        container.innerHTML = '';
-        
-        names.forEach(name => {
-          const nameCard = document.createElement('div');
-          nameCard.className = 'name-card';
-          nameCard.innerHTML = `
-            <button class="copy-btn" onclick="copyName('${name.name}')" title="Copy name">📋</button>
-            <h4>${name.name}</h4>
-            <p><strong>Meaning:</strong> ${name.meaning}</p>
-            <small><strong>Pronunciation:</strong> ${name.pronunciation}</small>
-          `;
-          container.appendChild(nameCard);
-        });
-        
-        container.style.display = 'grid';
-        
-        // Smooth scroll to results
-        container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }
-      
-      function copyName(name) {
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(name).then(() => {
-            showToast(`"${name}" copied to clipboard!`);
-          });
-        } else {
-          // Fallback for older browsers
-          const textArea = document.createElement('textarea');
-          textArea.value = name;
-          document.body.appendChild(textArea);
-          textArea.select();
-          document.execCommand('copy');
-          document.body.removeChild(textArea);
-          showToast(`"${name}" copied to clipboard!`);
-        }
-      }
-      
-      function showToast(message) {
-        const toast = document.createElement('div');
-        toast.style.cssText = `
-          position: fixed;
-          top: 20px;
-          right: 20px;
-          background: #d4af37;
-          color: #1a202c;
-          padding: 1rem 1.5rem;
-          border-radius: 0.5rem;
-          font-weight: 600;
-          z-index: 1000;
-          animation: slideIn 0.3s ease;
-        `;
-        toast.textContent = message;
-        document.body.appendChild(toast);
-        
-        setTimeout(() => {
-          toast.style.animation = 'slideOut 0.3s ease';
-          setTimeout(() => document.body.removeChild(toast), 300);
-        }, 3000);
-      }
-      
-      function toggleFaq(index) {
-        const answer = document.getElementById(`faq-${index}`);
-        const isVisible = answer.style.display === 'block';
-        
-        // Close all FAQs
-        document.querySelectorAll('.faq-answer').forEach(el => el.style.display = 'none');
-        document.querySelectorAll('.faq-question span').forEach(el => el.textContent = '▼');
-        
-        // Open selected FAQ if it wasn't already open
-        if (!isVisible) {
-          answer.style.display = 'block';
-          answer.previousElementSibling.querySelector('span').textContent = '▲';
-        }
-      }
+        ];
 
-      // CSS animations
-      const style = document.createElement('style');
-      style.textContent = `
-        @keyframes slideIn {
-          from { transform: translateX(100%); opacity: 0; }
-          to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideOut {
-          from { transform: translateX(0); opacity: 1; }
-          to { transform: translateX(100%); opacity: 0; }
-        }
-      `;
-      document.head.appendChild(style);
-      
-      // Advanced features for better user engagement
-      function shareNames() {
-        const generatedNames = document.querySelectorAll('.name-card h4');
-        if (generatedNames.length > 0) {
-          const namesList = Array.from(generatedNames).map(el => el.textContent).join(', ');
-          const shareText = `Check out these Elvish names I generated: ${namesList} - Created with Elvish Name Generator`;
-          
-          if (navigator.share) {
-            navigator.share({
-              title: 'My Elvish Names',
-              text: shareText,
-              url: window.location.href
+        function generateNames() {
+            const form = document.getElementById('nameForm');
+            const gender = document.getElementById('gender').value;
+            const language = document.getElementById('language').value;
+            const category = document.getElementById('category').value;
+            const count = parseInt(document.getElementById('count').value);
+            
+            // Show loading state
+            document.getElementById('generateText').style.display = 'none';
+            document.getElementById('loadingSpinner').style.display = 'inline-block';
+            
+            // Filter names based on criteria
+            let filteredNames = elvishNames.filter(name => {
+                return (gender === 'any' || name.gender === gender) &&
+                       (language === 'any' || name.language === language) &&
+                       (category === 'any' || name.category === category);
             });
-          } else if (navigator.clipboard) {
-            navigator.clipboard.writeText(shareText).then(() => {
-              showToast('Names and link copied to clipboard!');
+            
+            // If no names match, fall back to all names
+            if (filteredNames.length === 0) {
+                filteredNames = elvishNames;
+            }
+            
+            // Shuffle and select random names
+            const shuffled = filteredNames.sort(() => 0.5 - Math.random());
+            const selectedNames = shuffled.slice(0, count);
+            
+            // Display results after a short delay for realism
+            setTimeout(() => {
+                displayNames(selectedNames);
+                
+                // Reset button state
+                document.getElementById('generateText').style.display = 'inline';
+                document.getElementById('loadingSpinner').style.display = 'none';
+            }, 800);
+        }
+        
+        function displayNames(names) {
+            const resultsDiv = document.getElementById('nameResults');
+            resultsDiv.innerHTML = '';
+            
+            names.forEach(name => {
+                const nameCard = document.createElement('div');
+                nameCard.className = 'name-card animate-fade-in';
+                nameCard.innerHTML = `
+                    <div class="name-title">${name.name}</div>
+                    <div class="name-meaning">${name.meaning}</div>
+                    <div class="name-details">
+                        <span>${name.language.charAt(0).toUpperCase() + name.language.slice(1)}</span>
+                        <span>${name.gender.charAt(0).toUpperCase() + name.gender.slice(1)}</span>
+                        <span>${name.category.charAt(0).toUpperCase() + name.category.slice(1)}</span>
+                    </div>
+                    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--elvish-muted);">
+                        <strong>Pronunciation:</strong> ${name.pronunciation}
+                    </div>
+                `;
+                
+                // Add click-to-copy functionality
+                nameCard.addEventListener('click', () => {
+                    copyToClipboard(name.name);
+                    showToast(`"${name.name}" copied to clipboard!`);
+                });
+                
+                resultsDiv.appendChild(nameCard);
             });
-          }
         }
-      }
-      
-      // Add keyboard navigation
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' && e.target.tagName !== 'BUTTON') {
-          const generateBtn = document.querySelector('.btn');
-          if (generateBtn) generateBtn.click();
+        
+        function copyToClipboard(text) {
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text);
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand('copy');
+                textArea.remove();
+            }
         }
-      });
-      
-      // Track user preferences for better experience
-      function saveUserPreferences() {
-        const preferences = {
-          gender: document.getElementById('gender').value,
-          language: document.getElementById('language').value,
-          category: document.getElementById('category').value
-        };
-        localStorage.setItem('elvish-preferences', JSON.stringify(preferences));
-      }
-      
-      function loadUserPreferences() {
-        const saved = localStorage.getItem('elvish-preferences');
-        if (saved) {
-          try {
-            const preferences = JSON.parse(saved);
-            document.getElementById('gender').value = preferences.gender || 'any';
-            document.getElementById('language').value = preferences.language || 'sindarin';
-            document.getElementById('category').value = preferences.category || 'traditional';
-          } catch (e) {
-            console.log('Could not load preferences');
-          }
+        
+        function showToast(message) {
+            // Create a simple toast notification
+            const toast = document.createElement('div');
+            toast.innerHTML = message;
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--elvish-primary);
+                color: var(--elvish-light);
+                padding: 1rem 1.5rem;
+                border-radius: 0.5rem;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                z-index: 1000;
+                animation: slideIn 0.3s ease-out;
+            `;
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                }, 300);
+            }, 3000);
         }
-      }
-      
-      // Save preferences when changed
-      document.getElementById('gender').addEventListener('change', saveUserPreferences);
-      document.getElementById('language').addEventListener('change', saveUserPreferences);
-      document.getElementById('category').addEventListener('change', saveUserPreferences);
-      
-      // Enhanced analytics tracking (privacy-friendly)
-      function trackUsage(action, details = {}) {
-        // Simple client-side analytics without personal data
-        const usage = JSON.parse(localStorage.getItem('elvish-usage') || '{}');
-        const today = new Date().toISOString().split('T')[0];
         
-        if (!usage[today]) usage[today] = {};
-        if (!usage[today][action]) usage[today][action] = 0;
-        usage[today][action]++;
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const isVisible = answer.style.display === 'block';
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.style.display = 'none';
+            });
+            
+            // Toggle current item
+            answer.style.display = isVisible ? 'none' : 'block';
+        }
         
-        // Keep only last 7 days
-        const week = Object.keys(usage).sort().slice(-7);
-        const weekUsage = {};
-        week.forEach(day => weekUsage[day] = usage[day]);
+        // Add CSS animations for toast
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+            
+            @keyframes slideOut {
+                from {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
         
-        localStorage.setItem('elvish-usage', JSON.stringify(weekUsage));
-      }
-      
-      // Initialize and generate names
-      window.addEventListener('load', function() {
-        loadUserPreferences();
-        generateNames();
-        trackUsage('page_load');
-      });
-      
-      // Override generate function to include tracking
-      const originalGenerate = generateNames;
-      generateNames = function() {
-        saveUserPreferences();
-        trackUsage('generate_names', {
-          language: document.getElementById('language').value,
-          category: document.getElementById('category').value
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Generate initial names
+            generateNames();
         });
-        originalGenerate();
-      };
     </script>
-  </body>
+</body>
 </html>

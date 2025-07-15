@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import Header from "@/components/header";
+import Breadcrumbs from "@/components/breadcrumbs";
+import SchemaManager from "@/components/schema-manager";
 import Footer from "@/components/footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Eye, Database, UserCheck } from "lucide-react";
@@ -72,7 +74,14 @@ export default function Privacy() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-elvish-dark via-elvish-surface to-elvish-dark">
+      <SchemaManager 
+        pageType="privacy" 
+        title="Privacy Policy - Elvish Name Generator | Data Protection & Privacy"
+        description="Our privacy policy explains how we protect your data when using the Elvish Name Generator. Learn about our commitment to user privacy and data security."
+      />
+      
       <Header />
+      <Breadcrumbs />
       
       <main className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

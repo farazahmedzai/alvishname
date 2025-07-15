@@ -14,11 +14,11 @@ if (fs.existsSync('dist')) {
 
 // Build the client
 console.log('📦 Building client application...');
-execSync('npm run build:client', { stdio: 'inherit' });
+execSync('vite build', { stdio: 'inherit' });
 
 // Build the server
 console.log('🖥️  Building server...');
-execSync('npm run build:server', { stdio: 'inherit' });
+execSync('esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist', { stdio: 'inherit' });
 
 // Copy public files to dist
 console.log('📁 Copying public files...');

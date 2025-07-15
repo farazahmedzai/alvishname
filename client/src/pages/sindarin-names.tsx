@@ -8,6 +8,8 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import NameDisplay from "@/components/name-display";
 import Header from "@/components/header";
+import Breadcrumbs from "@/components/breadcrumbs";
+import SchemaManager from "@/components/schema-manager";
 import Footer from "@/components/footer";
 import { Link } from "wouter";
 import type { ElvishName, GenerateNamesRequest } from "@shared/schema";
@@ -125,7 +127,14 @@ export default function SindarinNames() {
     <div className="min-h-screen bg-elvish-dark text-elvish-light font-inter antialiased">
       <div className="fixed inset-0 bg-gradient-to-br from-elvish-dark via-elvish-primary/20 to-elvish-secondary/20 -z-10"></div>
       
+      <SchemaManager 
+        pageType="sindarin" 
+        title="Sindarin Name Generator - Free Grey-Elvish Names from LOTR"
+        description="Generate authentic Sindarin (Grey-elvish) names from Middle-earth. Free LOTR name generator with meanings and pronunciations. Perfect for D&D characters and fantasy writing."
+      />
+      
       <Header />
+      <Breadcrumbs />
       
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 overflow-hidden">

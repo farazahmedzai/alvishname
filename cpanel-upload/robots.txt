@@ -4,5 +4,40 @@ Allow: /
 # Sitemap location
 Sitemap: https://elvishnamegenerator.com/sitemap.xml
 
-# Crawl-delay for respectful crawling
+# Crawl delay (be respectful)
 Crawl-delay: 1
+
+# Specific directives for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Additional information
+# Website: https://elvishnamegenerator.com
+# Description: Authentic Elvish name generator for fantasy gaming and creative writing
+# Contact: Available through website contact form
+# Last updated: 2025-07-15

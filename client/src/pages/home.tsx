@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import Header from "@/components/header";
+import Breadcrumbs from "@/components/breadcrumbs";
+import SchemaManager from "@/components/schema-manager";
 import Generator from "@/components/generator";
 import EducationalContent from "@/components/educational-content";
 import FAQSection from "@/components/faq-section";
@@ -61,7 +63,14 @@ export default function Home() {
       {/* Background Elements */}
       <div className="fixed inset-0 bg-gradient-to-br from-elvish-dark via-elvish-primary/20 to-elvish-secondary/20 -z-10"></div>
       
+      <SchemaManager 
+        pageType="home" 
+        title="Elvish Name Generator - Free LOTR & Fantasy Elf Names with Meanings"
+        description="Generate authentic Elvish names inspired by Tolkien's LOTR. Free Sindarin & Quenya elf name generator with meanings. Perfect for D&D, fantasy writing & gaming."
+      />
+      
       <Header />
+      <Breadcrumbs />
       
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 overflow-hidden">
