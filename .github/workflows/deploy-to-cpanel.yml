@@ -1,0 +1,76 @@
+name: Deploy Elvish Name Generator to cPanel
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: 'Your domain name (e.g., yourdomain.com)'
+        required: true
+        default: 'elvishnamegenerator.com'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build project
+      run: npm run build
+      
+    - name: Prepare deployment files
+      run: |
+        mkdir -p deploy-files
+        cp cpanel-upload/index.html deploy-files/
+        cp cpanel-upload/.htaccess deploy-files/
+        cp cpanel-upload/robots.txt deploy-files/
+        cp cpanel-upload/sitemap.xml deploy-files/
+        
+    - name: Update domain references
+      run: |
+        DOMAIN="${{ github.event.inputs.domain || 'elvishnamegenerator.com' }}"
+        
+        # Update index.html
+        sed -i "s/elvishnamegenerator\.com/$DOMAIN/g" deploy-files/index.html
+        
+        # Update sitemap.xml
+        sed -i "s/elvishnamegenerator\.com/$DOMAIN/g" deploy-files/sitemap.xml
+        
+        # Update robots.txt
+        sed -i "s/elvishnamegenerator\.com/$DOMAIN/g" deploy-files/robots.txt
+        
+        echo "✅ Updated domain references to: $DOMAIN"
+        
+    - name: Deploy to cPanel via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./deploy-files/
+        server-dir: /public_html/
+        clean: false
+        
+    - name: Deployment Summary
+      run: |
+        echo "🚀 Deployment completed successfully!"
+        echo "📁 Files deployed:"
+        echo "  - index.html (Complete static application)"
+        echo "  - .htaccess (Server configuration)"
+        echo "  - robots.txt (SEO directives)"
+        echo "  - sitemap.xml (Site structure)"
+        echo ""
+        echo "🌐 Your Elvish Name Generator is now live!"
+        echo "🎯 Site will start ranking for 'elvish name generator' keywords"
