@@ -39,9 +39,9 @@ export default function Footer() {
             <ul className="space-y-2 text-elvish-gray">
               <li><Link href="/about" className="hover:text-elvish-accent transition-colors">About Elvish Languages</Link></li>
               <li><Link href="/privacy" className="hover:text-elvish-accent transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/#guide" className="hover:text-elvish-accent transition-colors">Pronunciation Guide</Link></li>
-              <li><Link href="/#faq" className="hover:text-elvish-accent transition-colors">Frequently Asked Questions</Link></li>
-              <li><Link href="/#guide" className="hover:text-elvish-accent transition-colors">Elvish Name Meanings</Link></li>
+              <li><button onClick={() => { window.location.href = '/#guide'; setTimeout(() => document.getElementById('guide')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="hover:text-elvish-accent transition-colors text-left">Pronunciation Guide</button></li>
+              <li><button onClick={() => { window.location.href = '/#faq'; setTimeout(() => document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="hover:text-elvish-accent transition-colors text-left">Frequently Asked Questions</button></li>
+              <li><button onClick={() => { window.location.href = '/#guide'; setTimeout(() => document.getElementById('guide')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="hover:text-elvish-accent transition-colors text-left">Elvish Name Meanings</button></li>
             </ul>
           </div>
         </div>
