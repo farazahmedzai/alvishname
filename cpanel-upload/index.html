@@ -469,11 +469,11 @@
         <nav class="nav container">
             <a href="/" class="logo">Elvish Names</a>
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/sindarin-names">Sindarin Names</a></li>
-                <li><a href="/quenya-names">Quenya Names</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/privacy">Privacy</a></li>
+                <li><a href="#generator">Home</a></li>
+                <li><a href="#generator" onclick="setLanguage('sindarin'); return false;">Sindarin Names</a></li>
+                <li><a href="#generator" onclick="setLanguage('quenya'); return false;">Quenya Names</a></li>
+                <li><a href="#about" onclick="scrollToSection('about'); return false;">About</a></li>
+                <li><a href="#privacy" onclick="scrollToSection('privacy'); return false;">Privacy</a></li>
             </ul>
         </nav>
     </header>
@@ -1518,6 +1518,19 @@
                 });
             }
             return false; // Prevent default anchor behavior
+        }
+        
+        function setLanguage(language) {
+            const languageSelect = document.getElementById('language');
+            languageSelect.value = language;
+            
+            // Scroll to generator section
+            scrollToSection('generator');
+            
+            // Optional: Generate names automatically
+            setTimeout(() => {
+                generateNames();
+            }, 500);
         }
         
         // Add CSS animations for toast
