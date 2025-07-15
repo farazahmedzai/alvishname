@@ -29,8 +29,8 @@ export default function Footer() {
               <li><Link href="/sindarin-names" className="hover:text-elvish-accent transition-colors">Sindarin Names Generator</Link></li>
               <li><Link href="/quenya-names" className="hover:text-elvish-accent transition-colors">Quenya Names Generator</Link></li>
               <li><Link href="/" className="hover:text-elvish-accent transition-colors">Free Elvish Name Generator</Link></li>
-              <li><Link href="/" className="hover:text-elvish-accent transition-colors">LOTR Elf Names</Link></li>
-              <li><Link href="/" className="hover:text-elvish-accent transition-colors">D&D Elf Names</Link></li>
+              <li><Link href="/sindarin-names" className="hover:text-elvish-accent transition-colors">LOTR Elf Names</Link></li>
+              <li><Link href="/quenya-names" className="hover:text-elvish-accent transition-colors">D&D Elf Names</Link></li>
             </ul>
           </div>
           
