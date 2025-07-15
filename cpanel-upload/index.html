@@ -33,6 +33,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
@@ -81,14 +84,14 @@
     <style>
         /* Critical CSS inlined for performance */
         :root {
-            --elvish-dark: #0a0b0d;
-            --elvish-surface: #1a1b1e;
-            --elvish-primary: #2c5aa0;
-            --elvish-secondary: #4a7ba7;
-            --elvish-accent: #8bb8d8;
-            --elvish-light: #e8f4fd;
-            --elvish-gray: #94a3b8;
-            --elvish-muted: #64748b;
+            --elvish-dark: hsl(222, 84%, 5%);
+            --elvish-surface: hsl(215, 28%, 17%);
+            --elvish-primary: hsl(210, 55%, 24%);
+            --elvish-secondary: hsl(85, 50%, 16%);
+            --elvish-accent: hsl(43, 74%, 49%);
+            --elvish-light: hsl(210, 40%, 98%);
+            --elvish-gray: hsl(215, 14%, 71%);
+            --elvish-muted: hsl(215, 14%, 45%);
         }
         
         * {
@@ -205,7 +208,7 @@
         
         .form-control {
             background: rgba(10, 11, 13, 0.5);
-            border: 1px solid rgba(139, 184, 216, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             color: var(--elvish-light);
             padding: 0.75rem;
             border-radius: 0.5rem;
@@ -218,8 +221,8 @@
         }
         
         .btn {
-            background: linear-gradient(135deg, var(--elvish-primary), var(--elvish-secondary));
-            color: var(--elvish-light);
+            background: linear-gradient(135deg, var(--elvish-accent), var(--elvish-secondary));
+            color: var(--elvish-dark);
             border: none;
             padding: 1rem 2rem;
             border-radius: 0.5rem;
@@ -231,7 +234,7 @@
         
         .btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(139, 184, 216, 0.3);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
         }
         
         /* Name Results */
@@ -243,16 +246,18 @@
         }
         
         .name-card {
-            background: rgba(44, 90, 160, 0.1);
-            border: 1px solid rgba(139, 184, 216, 0.2);
+            background: rgba(54, 71, 89, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.2);
             border-radius: 0.5rem;
             padding: 1.5rem;
             transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
         
         .name-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(139, 184, 216, 0.2);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
+            border-color: var(--elvish-accent);
         }
         
         .name-title {
@@ -467,13 +472,31 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav container">
-            <a href="/" class="logo">Elvish Names</a>
+            <a href="/" class="logo">
+                <i data-lucide="sparkles" style="width: 20px; height: 20px; display: inline-block; margin-right: 8px;"></i>
+                Elvish Names
+            </a>
             <ul class="nav-links">
-                <li><a href="#generator">Home</a></li>
-                <li><a href="#generator" onclick="setLanguage('sindarin'); return false;">Sindarin Names</a></li>
-                <li><a href="#generator" onclick="setLanguage('quenya'); return false;">Quenya Names</a></li>
-                <li><a href="#about" onclick="scrollToSection('about'); return false;">About</a></li>
-                <li><a href="#privacy" onclick="scrollToSection('privacy'); return false;">Privacy</a></li>
+                <li><a href="#generator">
+                    <i data-lucide="home" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
+                    Home
+                </a></li>
+                <li><a href="#generator" onclick="setLanguage('sindarin'); return false;">
+                    <i data-lucide="book" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
+                    Sindarin Names
+                </a></li>
+                <li><a href="#generator" onclick="setLanguage('quenya'); return false;">
+                    <i data-lucide="book-open" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
+                    Quenya Names
+                </a></li>
+                <li><a href="#about" onclick="scrollToSection('about'); return false;">
+                    <i data-lucide="info" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
+                    About
+                </a></li>
+                <li><a href="#privacy" onclick="scrollToSection('privacy'); return false;">
+                    <i data-lucide="shield" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
+                    Privacy
+                </a></li>
             </ul>
         </nav>
     </header>
@@ -1430,15 +1453,22 @@
                 const nameCard = document.createElement('div');
                 nameCard.className = 'name-card animate-fade-in';
                 nameCard.innerHTML = `
-                    <div class="name-title">${name.name}</div>
-                    <div class="name-meaning">${name.meaning}</div>
-                    <div class="name-details">
-                        <span>${name.language.charAt(0).toUpperCase() + name.language.slice(1)}</span>
-                        <span>${name.gender.charAt(0).toUpperCase() + name.gender.slice(1)}</span>
-                        <span>${name.category.charAt(0).toUpperCase() + name.category.slice(1)}</span>
-                    </div>
-                    <div style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--elvish-muted);">
-                        <strong>Pronunciation:</strong> ${name.pronunciation}
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <div style="flex: 1;">
+                            <div class="name-title">${name.name}</div>
+                            <div class="name-meaning">${name.meaning}</div>
+                            <div class="name-details">
+                                <span>${name.language.charAt(0).toUpperCase() + name.language.slice(1)}</span>
+                                <span>${name.gender.charAt(0).toUpperCase() + name.gender.slice(1)}</span>
+                                <span>${name.category.charAt(0).toUpperCase() + name.category.slice(1)}</span>
+                            </div>
+                            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--elvish-muted);">
+                                <strong>Pronunciation:</strong> ${name.pronunciation}
+                            </div>
+                        </div>
+                        <div style="opacity: 0.6; margin-left: 1rem;">
+                            <i data-lucide="copy" style="width: 18px; height: 18px;"></i>
+                        </div>
                     </div>
                 `;
                 
@@ -1450,6 +1480,11 @@
                 
                 resultsDiv.appendChild(nameCard);
             });
+            
+            // Re-initialize Lucide icons for the new content
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
         }
         
         function copyToClipboard(text) {
@@ -1602,6 +1637,11 @@
         
         // Initialize the page
         document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+            
             // Generate initial names
             generateNames();
             
