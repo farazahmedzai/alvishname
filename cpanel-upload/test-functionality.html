@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Elvish Name Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .info { background-color: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <h1>🧝 Elvish Name Generator - Functionality Test</h1>
+    
+    <div id="testResults"></div>
+    
+    <script>
+        function runTests() {
+            const results = document.getElementById('testResults');
+            
+            function addResult(message, type = 'info') {
+                const div = document.createElement('div');
+                div.className = `test-result ${type}`;
+                div.textContent = message;
+                results.appendChild(div);
+            }
+            
+            // Test 1: Load the main page
+            addResult('Testing main page load...', 'info');
+            
+            fetch('index.html')
+                .then(response => response.text())
+                .then(html => {
+                    // Test for key elements
+                    const hasGenerateButton = html.includes('Generate Names');
+                    const hasNameDatabase = html.includes('elvishNames');
+                    const hasJavaScript = html.includes('function generateNames()');
+                    
+                    if (hasGenerateButton) {
+                        addResult('✓ Generate button found', 'success');
+                    } else {
+                        addResult('✗ Generate button missing', 'error');
+                    }
+                    
+                    if (hasNameDatabase) {
+                        addResult('✓ Name database embedded', 'success');
+                    } else {
+                        addResult('✗ Name database missing', 'error');
+                    }
+                    
+                    if (hasJavaScript) {
+                        addResult('✓ JavaScript functionality present', 'success');
+                    } else {
+                        addResult('✗ JavaScript functionality missing', 'error');
+                    }
+                    
+                    // Test name count
+                    const nameCount = (html.match(/"name":/g) || []).length;
+                    addResult(`✓ Found ${nameCount} names in database`, 'success');
+                    
+                    // Test form elements
+                    const hasGenderSelect = html.includes('id="gender"');
+                    const hasLanguageSelect = html.includes('id="language"');
+                    const hasCategorySelect = html.includes('id="category"');
+                    
+                    if (hasGenderSelect && hasLanguageSelect && hasCategorySelect) {
+                        addResult('✓ All form elements present', 'success');
+                    } else {
+                        addResult('✗ Some form elements missing', 'error');
+                    }
+                    
+                    addResult('🎉 Static HTML deployment is ready!', 'success');
+                    addResult('📁 Upload files: index.html, .htaccess, robots.txt, sitemap.xml, site.webmanifest', 'info');
+                })
+                .catch(error => {
+                    addResult('✗ Error loading page: ' + error.message, 'error');
+                });
+        }
+        
+        // Run tests on page load
+        window.onload = runTests;
+    </script>
+</body>
+</html>

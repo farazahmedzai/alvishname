@@ -505,7 +505,7 @@
                     <div>
                         <label for="language" style="display: block; margin-bottom: 0.5rem; color: var(--elvish-gray);">Language</label>
                         <select id="language" class="form-control">
-                            <option value="any">Any Language</option>
+                            <option value="general">Any Language</option>
                             <option value="sindarin">Sindarin (Grey-elvish)</option>
                             <option value="quenya">Quenya (High Elvish)</option>
                         </select>
@@ -514,6 +514,7 @@
                     <div>
                         <label for="category" style="display: block; margin-bottom: 0.5rem; color: var(--elvish-gray);">Category</label>
                         <select id="category" class="form-control">
+                            <option value="any">Any Category</option>
                             <option value="traditional">Traditional</option>
                             <option value="nature">Nature</option>
                             <option value="warrior">Warrior</option>
@@ -1385,7 +1386,6 @@
         ];
 
         function generateNames() {
-            const form = document.getElementById('nameForm');
             const gender = document.getElementById('gender').value;
             const language = document.getElementById('language').value;
             const category = document.getElementById('category').value;
@@ -1397,9 +1397,10 @@
             
             // Filter names based on criteria
             let filteredNames = elvishNames.filter(name => {
-                return (gender === 'any' || name.gender === gender) &&
-                       (language === 'any' || name.language === language) &&
-                       (category === 'any' || name.category === category);
+                const genderMatch = (gender === 'any' || name.gender === gender);
+                const languageMatch = (language === 'general' || name.language === language);
+                const categoryMatch = (category === 'any' || name.category === category);
+                return genderMatch && languageMatch && categoryMatch;
             });
             
             // If no names match, fall back to all names
@@ -1408,8 +1409,8 @@
             }
             
             // Shuffle and select random names
-            const shuffled = filteredNames.sort(() => 0.5 - Math.random());
-            const selectedNames = shuffled.slice(0, count);
+            const shuffled = [...filteredNames].sort(() => 0.5 - Math.random());
+            const selectedNames = shuffled.slice(0, Math.min(count, shuffled.length));
             
             // Display results after a short delay for realism
             setTimeout(() => {
