@@ -69,6 +69,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/robots\.txt$
 RewriteCond %{REQUEST_URI} !^/sitemap\.xml$
+RewriteCond %{REQUEST_URI} !^/site\.webmanifest$
 RewriteRule . /index.html [L]
 
 # Canonical URL enforcement (remove www and trailing slashes)
