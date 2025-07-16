@@ -523,11 +523,11 @@
                     <i data-lucide="book-open" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
                     Quenya Names
                 </a></li>
-                <li><a href="#about" onclick="scrollToSection('about'); return false;">
+                <li><a href="#guide" onclick="scrollToSection('guide'); return false;">
                     <i data-lucide="info" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
                     About
                 </a></li>
-                <li><a href="#privacy" onclick="scrollToSection('privacy'); return false;">
+                <li><a href="#" onclick="showPrivacyInfo(); return false;">
                     <i data-lucide="shield" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
                     Privacy
                 </a></li>
@@ -1709,26 +1709,34 @@
             }
         }
         
+        function setLanguage(language) {
+            document.getElementById('language').value = language;
+            scrollToSection('generator');
+            if (language === 'sindarin') {
+                showToast('Sindarin Names Generator: Generate authentic Grey-elvish names from Middle-earth!');
+            } else if (language === 'quenya') {
+                showToast('Quenya Names Generator: Generate authentic High Elvish names from Valinor!');
+            }
+        }
+        
+        function showPrivacyInfo() {
+            showToast('Privacy: This tool works entirely in your browser. No personal data is collected or stored.');
+        }
+        
         function navigateToPage(page) {
             switch(page) {
                 case 'sindarin-names':
-                    // Set language to Sindarin and scroll to generator
-                    document.getElementById('language').value = 'sindarin';
-                    scrollToSection('generator');
-                    showToast('Sindarin Names Generator: Generate authentic Grey-elvish names from Middle-earth!');
+                    setLanguage('sindarin');
                     break;
                 case 'quenya-names':
-                    // Set language to Quenya and scroll to generator
-                    document.getElementById('language').value = 'quenya';
-                    scrollToSection('generator');
-                    showToast('Quenya Names Generator: Generate authentic High Elvish names from Valinor!');
+                    setLanguage('quenya');
                     break;
                 case 'about':
                     scrollToSection('guide');
                     showToast('About: Learn about authentic Elvish linguistics and Tolkien\'s language creation.');
                     break;
                 case 'privacy':
-                    showToast('Privacy: This tool works entirely in your browser. No personal data is collected or stored.');
+                    showPrivacyInfo();
                     break;
                 default:
                     scrollToSection('generator');
