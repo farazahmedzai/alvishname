@@ -527,7 +527,7 @@
                     <i data-lucide="info" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
                     About
                 </a></li>
-                <li><a href="javascript:void(0);" onclick="showPrivacyInfo();">
+                <li><a href="#privacy" onclick="showPrivacyPage(); return false;">
                     <i data-lucide="shield" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
                     Privacy
                 </a></li>
@@ -727,6 +727,56 @@
                 </button>
                 <div class="faq-answer" style="display: none;">
                     Yes, each name's meaning is derived from authentic Elvish root words and linguistic elements. The meanings reflect the cultural and spiritual values of the Eldar, often connecting to nature, light, wisdom, and noble qualities.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section class="privacy-policy" id="privacy" style="padding: 4rem 0; background: var(--elvish-dark); display: none;">
+        <div class="container">
+            <h2 style="font-family: 'Cinzel', serif; text-align: center; color: var(--elvish-accent); font-size: 2.5rem; margin-bottom: 3rem;">Privacy Policy</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: rgba(26, 27, 30, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem;">
+                    <h3 style="color: var(--elvish-accent); font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 1rem;">Data Collection</h3>
+                    <p style="color: var(--elvish-gray); line-height: 1.8; margin-bottom: 1rem;">
+                        This Elvish Name Generator operates entirely within your web browser. We do not collect, store, or transmit any personal information or usage data to external servers.
+                    </p>
+                </div>
+                
+                <div style="background: rgba(26, 27, 30, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem;">
+                    <h3 style="color: var(--elvish-accent); font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 1rem;">Local Processing</h3>
+                    <p style="color: var(--elvish-gray); line-height: 1.8; margin-bottom: 1rem;">
+                        All name generation occurs locally in your browser using JavaScript. The database of Elvish names is included in the website code and processed entirely on your device.
+                    </p>
+                </div>
+                
+                <div style="background: rgba(26, 27, 30, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem;">
+                    <h3 style="color: var(--elvish-accent); font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 1rem;">Cookies & Tracking</h3>
+                    <p style="color: var(--elvish-gray); line-height: 1.8; margin-bottom: 1rem;">
+                        This website does not use cookies for tracking or data collection. Any browser storage used is purely for improving your user experience (such as remembering your language preferences) and remains on your device.
+                    </p>
+                </div>
+                
+                <div style="background: rgba(26, 27, 30, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 1rem; padding: 2rem; margin-bottom: 2rem;">
+                    <h3 style="color: var(--elvish-accent); font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 1rem;">Third-Party Services</h3>
+                    <p style="color: var(--elvish-gray); line-height: 1.8; margin-bottom: 1rem;">
+                        This website uses Google Fonts for typography and Lucide Icons for visual elements. These services may have their own privacy policies. No analytics or tracking services are implemented.
+                    </p>
+                </div>
+                
+                <div style="background: rgba(26, 27, 30, 0.8); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 1rem; padding: 2rem;">
+                    <h3 style="color: var(--elvish-accent); font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 1rem;">Contact Information</h3>
+                    <p style="color: var(--elvish-gray); line-height: 1.8;">
+                        This tool is provided as-is for educational and entertainment purposes. For questions about Tolkien's linguistic work, we recommend consulting academic sources on Middle-earth languages.
+                    </p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#generator" onclick="scrollToSection('generator'); return false;" style="display: inline-block; background: linear-gradient(135deg, var(--elvish-accent), var(--elvish-secondary)); color: var(--elvish-dark); padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: transform 0.3s;">
+                        Return to Generator
+                    </a>
                 </div>
             </div>
         </div>
@@ -1654,6 +1704,9 @@
         }
         
         function scrollToSection(sectionId) {
+            // Show all sections first (in case we're coming from privacy page)
+            showAllSections();
+            
             const element = document.getElementById(sectionId);
             if (element) {
                 element.scrollIntoView({ 
@@ -1662,6 +1715,23 @@
                 });
             }
             return false; // Prevent default anchor behavior
+        }
+        
+        function showAllSections() {
+            // Show all main sections
+            const mainSections = ['hero', 'generator', 'guide', 'linguistics-section', 'faq'];
+            mainSections.forEach(sectionClass => {
+                const elements = document.querySelectorAll(`.${sectionClass}, #${sectionClass}`);
+                elements.forEach(element => {
+                    if (element) element.style.display = 'block';
+                });
+            });
+            
+            // Hide privacy section
+            const privacySection = document.getElementById('privacy');
+            if (privacySection) {
+                privacySection.style.display = 'none';
+            }
         }
         
         function setLanguage(language) {
@@ -1724,6 +1794,20 @@
                 showToast('Sindarin Names Generator: Generate authentic Grey-elvish names from Middle-earth!');
             } else if (language === 'quenya') {
                 showToast('Quenya Names Generator: Generate authentic High Elvish names from Valinor!');
+            }
+        }
+        
+        function showPrivacyPage() {
+            // Hide all sections first
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show privacy policy section
+            const privacySection = document.getElementById('privacy');
+            if (privacySection) {
+                privacySection.style.display = 'block';
+                privacySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
         
