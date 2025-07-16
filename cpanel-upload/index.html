@@ -320,6 +320,40 @@
             line-height: 1.7;
         }
         
+        /* Linguistics Section */
+        .linguistics-section {
+            padding: 4rem 0;
+        }
+        
+        .linguistics-section h2 {
+            background: linear-gradient(135deg, var(--elvish-light), var(--elvish-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .linguistics-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .linguistics-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+        }
+        
+        .linguistics-card h3 {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .linguistics-card h4 {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .linguistics-card ul li {
+            margin-bottom: 0.3rem;
+        }
+        
         /* FAQ Section */
         .faq {
             padding: 4rem 0;
@@ -586,6 +620,72 @@
                     <h3>Pronunciation Guide</h3>
                     <p>Elvish names follow specific pronunciation rules: 'c' is always hard like 'k', 'g' is always hard as in 'go', 'r' is rolled, and stress typically falls on the first syllable. The 'th' sound is pronounced as in 'think', and vowels are generally pure as in Latin.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The History and Linguistics of Elvish Names -->
+    <section class="linguistics-section" style="background: rgba(26, 27, 30, 0.9); padding: 4rem 0;">
+        <div class="container">
+            <h2 style="font-family: 'Cinzel', serif; text-align: center; color: var(--elvish-accent); font-size: 2.5rem; margin-bottom: 3rem;">The History and Linguistics of Elvish Names</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                <!-- Tolkien's Linguistic Creation -->
+                <div class="linguistics-card" style="background: rgba(44, 90, 160, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 1rem; padding: 2rem;">
+                    <h3 style="color: var(--elvish-accent); font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 1rem;">Tolkien's Linguistic Creation</h3>
+                    <p style="color: var(--elvish-gray); line-height: 1.8; margin-bottom: 1rem;">
+                        J.R.R. Tolkien, a philologist and professor at Oxford University, created the Elvish languages as complete linguistic systems with their own grammar, vocabulary, and cultural context. His passion for language creation began in his youth and became the foundation for Middle-earth itself. Tolkien famously said that he created the stories to provide a world for his languages, not the other way around.
+                    </p>
+                    <p style="color: var(--elvish-gray); line-height: 1.8; margin-bottom: 1rem;">
+                        The two primary Elvish languages, Sindarin and Quenya, represent different periods and cultures in Tolkien's fictional history. Sindarin, spoken by the Grey-elves, became the vernacular tongue in Middle-earth during the Third Age. Quenya, the "High Elvish," was the language of the Valar and the Eldar in Valinor, considered more ancient and formal.
+                    </p>
+                    <p style="color: var(--elvish-gray); line-height: 1.8;">
+                        Tolkien's linguistic expertise is evident in the consistent phonological and grammatical rules that govern these languages. He drew inspiration from Finnish (for Quenya) and Welsh (for Sindarin), creating languages that feel both familiar and otherworldly. The sound patterns, stress placement, and morphological structures all follow systematic rules that give the languages their distinctive character.
+                    </p>
+                </div>
+
+                <!-- Sindarin vs. Quenya Differences -->
+                <div class="linguistics-card" style="background: rgba(44, 90, 160, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 1rem; padding: 2rem;">
+                    <h3 style="color: var(--elvish-accent); font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 1rem;">Sindarin vs. Quenya Differences</h3>
+                    
+                    <div style="background: rgba(10, 11, 13, 0.3); border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--elvish-accent); margin-bottom: 0.5rem;">Sindarin Characteristics:</h4>
+                        <ul style="color: var(--elvish-gray); line-height: 1.7; margin-left: 1rem;">
+                            <li>More commonly spoken in Middle-earth</li>
+                            <li>Softer, more flowing sounds</li>
+                            <li>Welsh-inspired phonology</li>
+                            <li>Complex consonant mutations</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: rgba(10, 11, 13, 0.3); border-radius: 0.5rem; padding: 1.5rem;">
+                        <h4 style="color: var(--elvish-accent); margin-bottom: 0.5rem;">Quenya Characteristics:</h4>
+                        <ul style="color: var(--elvish-gray); line-height: 1.7; margin-left: 1rem;">
+                            <li>The "High Elvish" of ceremony and lore</li>
+                            <li>More archaic and formal</li>
+                            <li>Finnish-inspired structure</li>
+                            <li>Rich case system and agglutination</li>
+                        </ul>
+                    </div>
+                    
+                    <p style="color: var(--elvish-gray); line-height: 1.8; margin-top: 1rem;">
+                        Understanding these differences helps in choosing appropriate names for different contexts. Sindarin names might be more suitable for everyday characters, while Quenya names often carry more weight and formality, perfect for noble or ancient characters.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Influence on Modern Fantasy -->
+            <div class="linguistics-card" style="background: rgba(44, 90, 160, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 1rem; padding: 2rem;">
+                <h3 style="color: var(--elvish-accent); font-family: 'Crimson Text', serif; font-size: 1.5rem; margin-bottom: 1rem;">Influence on Modern Fantasy</h3>
+                <p style="color: var(--elvish-gray); line-height: 1.8; margin-bottom: 1rem;">
+                    Tolkien's Elvish languages have profoundly influenced modern fantasy literature, gaming, and popular culture. From Dungeons & Dragons to modern fantasy novels, the aesthetic and linguistic principles established by Tolkien continue to shape how we imagine fantastical languages and names. The melodic quality of Elvish names has become synonymous with elegance and otherworldly beauty.
+                </p>
+                <p style="color: var(--elvish-gray); line-height: 1.8; margin-bottom: 1rem;">
+                    In gaming communities, particularly in D&D and other tabletop RPGs, Elvish names serve as a bridge between our world and fantastical realms. They provide players with a sense of authenticity and depth, connecting their characters to the rich linguistic tradition that Tolkien established. The careful construction of these names ensures they sound believable within the fantasy context while maintaining their exotic appeal.
+                </p>
+                <p style="color: var(--elvish-gray); line-height: 1.8;">
+                    Modern fantasy authors often draw inspiration from Tolkien's linguistic approach, creating their own constructed languages or borrowing the aesthetic principles of Sindarin and Quenya. This generator respects that tradition by providing names that follow authentic Elvish linguistic patterns, ensuring they feel genuine rather than randomly assembled syllables.
+                </p>
             </div>
         </div>
     </section>
