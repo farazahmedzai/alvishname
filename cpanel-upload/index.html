@@ -1613,12 +1613,18 @@
                 position: fixed;
                 top: 20px;
                 right: 20px;
+                max-width: 400px;
+                width: auto;
                 background: var(--elvish-primary);
                 color: var(--elvish-light);
                 padding: 1rem 1.5rem;
                 border-radius: 0.5rem;
                 box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                border: 1px solid var(--elvish-accent);
                 z-index: 1000;
+                font-size: 0.9rem;
+                line-height: 1.4;
+                word-wrap: break-word;
                 animation: slideIn 0.3s ease-out;
             `;
             
@@ -1627,9 +1633,11 @@
             setTimeout(() => {
                 toast.style.animation = 'slideOut 0.3s ease-in';
                 setTimeout(() => {
-                    document.body.removeChild(toast);
+                    if (document.body.contains(toast)) {
+                        document.body.removeChild(toast);
+                    }
                 }, 300);
-            }, 3000);
+            }, 4000);
         }
         
         function toggleFAQ(button) {
@@ -1721,7 +1729,7 @@
         
         function showPrivacyInfo() {
             console.log('Privacy link clicked'); // Debug log
-            showToast('Privacy Policy: This Elvish name generator works entirely in your browser. No personal data is collected, stored, or transmitted to any servers.');
+            showToast('Privacy: This tool runs locally in your browser. No data is collected or stored.');
         }
         
         function navigateToPage(page) {
