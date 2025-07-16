@@ -527,7 +527,7 @@
                     <i data-lucide="info" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
                     About
                 </a></li>
-                <li><a href="#" onclick="showPrivacyInfo(); return false;">
+                <li><a href="javascript:void(0);" onclick="showPrivacyInfo();">
                     <i data-lucide="shield" style="width: 16px; height: 16px; display: inline-block; margin-right: 6px;"></i>
                     Privacy
                 </a></li>
@@ -1720,7 +1720,8 @@
         }
         
         function showPrivacyInfo() {
-            showToast('Privacy: This tool works entirely in your browser. No personal data is collected or stored.');
+            console.log('Privacy link clicked'); // Debug log
+            showToast('Privacy Policy: This Elvish name generator works entirely in your browser. No personal data is collected, stored, or transmitted to any servers.');
         }
         
         function navigateToPage(page) {
@@ -1766,6 +1767,15 @@
                     }
                 });
             });
+            
+            // Additional event listener for privacy link
+            const privacyLink = document.querySelector('a[onclick*="showPrivacyInfo"]');
+            if (privacyLink) {
+                privacyLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPrivacyInfo();
+                });
+            }
         });
     </script>
 </body>
